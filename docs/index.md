@@ -6,7 +6,7 @@ hero:
   name: "Threejs 3D 可视化文档"
   text: "A VitePress Site"
   tagline: My great project tagline
-  image: 
+  image:
     src: /logo.png
     alt: zhangfangchao
   actions:
@@ -25,4 +25,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
