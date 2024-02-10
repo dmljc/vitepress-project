@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "前端记事本",
-  description: "A VitePress Site",
+  description: "描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息",
   base: "/vitepress-project/",
   head: [
     // 添加图标
