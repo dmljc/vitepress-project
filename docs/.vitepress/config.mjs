@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "前端记事本",
   description: "A VitePress Site",
-  base: "/",
+  base: "/vitepress-project/",
   head: [
     // 添加图标
     ["link", { rel: "icon", href: "/favicon.ico" }],
