@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Threejs 3D 可视化文档"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "Threejs 3D 可视化"
+  text: "文档"
+  tagline: 此站点为本人用来记录学习的笔记本
   image:
     src: /logo.png
     alt: zhangfangchao

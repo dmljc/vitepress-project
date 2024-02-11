@@ -8,20 +8,30 @@ export default defineConfig({
     head: [["link", { rel: "icon", href: "./favicon.ico" }]],
     lastUpdated: true,
     themeConfig: {
-        logo: "/logo.png", // 表示docs/public/avartar.png
+        logo: "/logo.png", 
         nav: [
-            { text: "Home", link: "/" },
-            { text: "Examples", link: "/markdown-examples" },
+            { text: "首页", link: "/" },
+            { text: "3D可视化", link: "/threejs/index" },
         ],
-        sidebar: [
-            {
-                text: "Examples",
-                items: [
-                    { text: "Markdown Examples", link: "/markdown-examples" },
-                    { text: "Runtime API Examples", link: "/api-examples" },
-                ],
-            },
-        ],
+        sidebar: {
+            // 当用户位于 `threejs` 目录时，会显示此侧边栏
+            '/threejs/': [
+                {
+                    text: '第一章',
+                    items: [
+                        { text: '第一节', link: '/threejs/phaseA/1' },
+                        { text: '第二节', link: '/threejs/phaseA/2' }
+                    ]
+                },
+                {
+                    text: '第二章',
+                    items: [
+                        { text: '第一节', link: '/threejs/phaseB/1' },
+                        { text: '第二节', link: '/threejs/phaseB/2' }
+                    ]
+                }
+            ],
+        },
         socialLinks: [
             { icon: "github", link: "https://github.com/vuejs/vitepress" },
         ],
@@ -39,7 +49,7 @@ export default defineConfig({
         // 站点页脚配置
         footer: {
             message: "Released under the MIT License",
-            copyright: "Copyright © 2023-present Lao Yuan",
+            copyright: "Copyright © 2024-present Zhang Fang Chao",
         },
     },
 });
