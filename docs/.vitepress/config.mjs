@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "前端记事本",
-    description: "描述信息",
+    description: "描述信息x",
     base: "/vitepress-project/",
     head: [["link", { rel: "icon", href: "./favicon.ico" }]],
     lastUpdated: true,
