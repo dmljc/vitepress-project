@@ -4,7 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
     title: "前端记事本",
     description: "描述信息x",
-    base: "/vitepress-project/",
+    base: "/vitepress-project",
     head: [["link", { rel: "icon", href: "./favicon.ico" }]],
     lastUpdated: true,
     themeConfig: {
