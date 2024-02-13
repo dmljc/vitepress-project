@@ -17,10 +17,11 @@ export default defineConfig({
             // 当用户位于 `threejs` 目录时，会显示此侧边栏
             '/threejs/': [
                 {
-                    text: '第一章',
+                    text: '基础概念',
                     items: [
-                        { text: '第一节', link: '/threejs/phaseA/1' },
-                        { text: '第二节', link: '/threejs/phaseA/2' }
+                        { text: '虚拟场景 Scene', link: '/threejs/phaseA/scene' },
+                        { text: '虚拟相机 Camera', link: '/threejs/phaseA/camera' },
+                        { text: '渲染器 Renderer', link: '/threejs/phaseA/renderer' },
                     ]
                 },
                 {
