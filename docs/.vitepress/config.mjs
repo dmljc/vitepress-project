@@ -25,6 +25,7 @@ export default defineConfig({
                         { text: '坐标系 AxesHelper', link: '/threejs/phaseA/axesHelper' },
                         { text: '光源 Light', link: '/threejs/phaseA/light' },
                         { text: '轨道控制器 OrbitControls', link: '/threejs/phaseA/orbitControls' },
+                        { text: '动画 requestAnimationFrame', link: '/threejs/phaseA/requestAnimationFrame' },
                     ]
                 },
                 {
@@ -49,7 +50,7 @@ export default defineConfig({
         },
         lastUpdatedText: "最后更新", // string
         // 右侧边栏配置，默认值是"In hac pagina"
-        outlineTitle: "本页目录",
+        outlineTitle: "页面导航",
         // 站点页脚配置
         footer: {
             message: "Released under the MIT License",
