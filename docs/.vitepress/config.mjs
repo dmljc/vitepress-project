@@ -22,6 +22,7 @@ export default defineConfig({
                         { text: '虚拟场景 Scene', link: '/threejs/phaseA/scene' },
                         { text: '虚拟相机 Camera', link: '/threejs/phaseA/camera' },
                         { text: '渲染器 Renderer', link: '/threejs/phaseA/renderer' },
+                        { text: '坐标系 AxesHelper', link: '/threejs/phaseA/axesHelper' },
                     ]
                 },
                 {
