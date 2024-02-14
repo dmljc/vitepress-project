@@ -24,6 +24,7 @@ export default defineConfig({
                         { text: '渲染器 Renderer', link: '/threejs/phaseA/renderer' },
                         { text: '坐标系 AxesHelper', link: '/threejs/phaseA/axesHelper' },
                         { text: '光源 Light', link: '/threejs/phaseA/light' },
+                        { text: '轨道控制器 OrbitControls', link: '/threejs/phaseA/orbitControls' },
                     ]
                 },
                 {
