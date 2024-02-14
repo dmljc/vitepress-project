@@ -18,11 +18,45 @@ threejs提供的网格材质，有的受光照影响，有的不受光照影响�
 // 漫反射 受光照影响
 const material = new THREE.MeshLambertMaterial(); 
 ```
-
 ## 光源简介
 
 ![光源简介](/lightIntroduce.svg)
 
+## 环境光
+
+环境光 AmbientLight 没有特定方向，只是整体改变场景的光照明暗。
+
+```js
+const ambient = new THREE.AmbientLight(0xffffff, 0.4);
+scene.add(ambient);
+```
+
+## 平行光
+
+平行光 DirectionalLight 就是沿着特定方向发射。
+
+```js
+// 平行光
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+// 设置光源的方向：通过光源position属性和目标指向对象的position属性计算
+directionalLight.position.set(80, 100, 50);
+// 方向光指向对象网格模型mesh，可以不设置，默认的位置是0,0,0
+directionalLight.target = mesh;
+scene.add(directionalLight);
+```
+### 平行光辅助观察 DirectionalLightHelper
+
+通过点光源辅助观察对象DirectionalLightHelper可视化点光源。
+
+![平行光辅助观察对象](/directionalLightHelper.jpg)
+
+```js
+// light-- 被模拟的光源.
+// size -- (可选的) 平面的尺寸. 默认为 1.
+// color -- (可选的) 如果没有设置颜色将使用光源的颜色.
+const dirLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5, 0xffff00);
+scene.add(dirLightHelper);
+```
 
 ## 点光源
 
@@ -42,8 +76,7 @@ const pointLight = new THREE.PointLight(0xffffff, 1.0);
 // 光照强度
 pointLight.intensity = 1.0;
 ```
-
-## 光源衰减
+### 光源衰减
 
 实际生活中点光源，比如比如一个灯泡，随机距离的改变，光线会衰减，越来越弱，光源衰减属性.decay默认值是2.0，如果你不希望衰减可以设置为0.0。
 
@@ -51,8 +84,7 @@ pointLight.intensity = 1.0;
 // 设置光源不随距离衰减
 pointLight.decay = 0.0;
 ```
-
-## 光源位置
+### 光源位置
 
 你把点光源想象为一个电灯泡，你在3D空间中，放的位置不同，模型的渲染效果就不一样。
 
@@ -63,7 +95,7 @@ pointLight.decay = 0.0;
 pointLight.position.set(400, 0, 0);
 ```
 
-## 光源添加到场景
+### 光源添加到场景
 
 光源和网格模型Mesh对应一样是三维场景的一部分，自然需要添加到三维场景中才能起作用。
 
@@ -72,8 +104,18 @@ pointLight.position.set(400, 0, 0);
 scene.add(pointLight); 
 ```
 
-## 改变光源位置，观察网格模型表面的明暗变化。
+### 改变光源位置，观察网格模型表面的明暗变化。
 
 ```js
 pointLight.position.set(400, 200, 300); 
+```
+
+### 点光源辅助观察 PointLightHelper
+
+通过点光源辅助观察对象PointLightHelper可视化点光源。
+
+```js
+// 光源辅助观察
+const pointLightHelper = new THREE.PointLightHelper(pointLight, 10);
+scene.add(pointLightHelper);
 ```
