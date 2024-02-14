@@ -10,7 +10,7 @@ outline: deep
 
 ![基础概念](/scene.png)
 
-```vue
+```vue:line-numbers {0}
 <template>
     <div id="container"></div>
 </template>
