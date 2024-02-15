@@ -26,6 +26,7 @@ export default defineConfig({
                         { text: '光源 Light', link: '/threejs/phaseA/light' },
                         { text: '轨道控制器 OrbitControls', link: '/threejs/phaseA/orbitControls' },
                         { text: '动画 requestAnimationFrame', link: '/threejs/phaseA/requestAnimationFrame' },
+                        { text: '阵列立方体', link: '/threejs/phaseA/matrix' },
                     ]
                 },
                 {
