@@ -48,6 +48,17 @@ Three.js提供了各种各样的几何体API，用来表示三维物体的几何
 const geometry = new THREE.BoxGeometry(100, 100, 100); 
 ```
 
+### 双面可见
+
+Three.js 的材质`默认正面可见`，反面不可见，对于`矩形平面` PlaneGeometry、`圆形平面` CircleGeometry 如果你想看到两面，可以设置 `side: THREE.DoubleSide`。
+
+```js
+new THREE.MeshBasicMaterial({
+    side: THREE.FrontSide, // 默认只有正面可见 // [!code --]
+    side: THREE.DoubleSide, // 两面可见 // [!code ++]
+});
+```
+
 ### 物体外观：材质 Material
 
 如果你想定义物体的外观效果，比如颜色，就需要通过材质Material相关的API实现。
