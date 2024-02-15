@@ -28,6 +28,7 @@ export default defineConfig({
                         { text: '动画 requestAnimationFrame', link: '/threejs/phaseA/requestAnimationFrame' },
                         { text: '阵列立方体', link: '/threejs/phaseA/matrix' },
                         { text: '渲染器设置(锯齿模糊)', link: '/threejs/phaseA/antialias' },
+                        { text: 'Gui 可视化改变三维场景', link: '/threejs/phaseA/gui' },
                     ]
                 },
                 {
