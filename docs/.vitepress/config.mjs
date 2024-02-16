@@ -31,6 +31,7 @@ export default defineConfig({
                         { text: 'Gui 可视化改变三维场景', link: '/threejs/phaseA/gui' },
                         { text: 'Gui 常用事件', link: '/threejs/phaseA/guiEvent' },
                         { text: 'Gui 常用组件', link: '/threejs/phaseA/guiComp' },
+                        { text: 'Gui 分组管理', link: '/threejs/phaseA/guiGroup' },
                     ]
                 },
                 {
