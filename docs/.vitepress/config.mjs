@@ -29,6 +29,7 @@ export default defineConfig({
                         { text: '阵列立方体', link: '/threejs/phaseA/matrix' },
                         { text: '渲染器设置(锯齿模糊)', link: '/threejs/phaseA/antialias' },
                         { text: 'Gui 可视化改变三维场景', link: '/threejs/phaseA/gui' },
+                        { text: 'Gui 常用事件', link: '/threejs/phaseA/guiEvent' },
                     ]
                 },
                 {

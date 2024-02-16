@@ -57,7 +57,6 @@ scene.add(directionalLight);
 const dirLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5, 0xffff00);
 scene.add(dirLightHelper);
 ```
-
 ## 点光源
 
 ![点光源](/lightType.png)
@@ -103,13 +102,11 @@ pointLight.position.set(400, 0, 0);
 // 点光源添加到场景中
 scene.add(pointLight); 
 ```
-
 ### 改变光源位置，观察网格模型表面的明暗变化。
 
 ```js
 pointLight.position.set(400, 200, 300); 
 ```
-
 ### 点光源辅助观察 PointLightHelper
 
 通过点光源辅助观察对象PointLightHelper可视化点光源。
@@ -119,3 +116,15 @@ pointLight.position.set(400, 200, 300);
 const pointLightHelper = new THREE.PointLightHelper(pointLight, 10);
 scene.add(pointLightHelper);
 ```
+
+## 版本 bug
+
+::: warning 版本 bug
+threejs 最新版本 0.161.0 存在 点光源失效的 bug，所以先降级到 0.150.0 版本了。
+:::
+
+## 注意
+
+::: tip 注意
+验证点光源效果的时候记得把环境光关掉，为了效果更明显最好不要开启材质的透明属性。
+:::
