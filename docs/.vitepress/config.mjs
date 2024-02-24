@@ -35,10 +35,10 @@ export default defineConfig({
                     ]
                 },
                 {
-                    text: '第二章',
+                    text: '三维向量',
                     items: [
-                        { text: '第一节', link: '/threejs/phaseB/1' },
-                        { text: '第二节', link: '/threejs/phaseB/2' }
+                        { text: '三维对象 Vector3', link: '/threejs/phaseB/vector3' },
+                        { text: '欧拉对象 Euler', link: '/threejs/phaseB/euler' },
                     ]
                 }
             ],
