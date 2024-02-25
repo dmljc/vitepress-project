@@ -4,7 +4,8 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
     title: "前端记事本",
     description: "描述信息x",
-    base: "/vitepress-project",
+    // base: "/vitepress-project", github.io 地址需要base
+    base: "/", // 自定义域名
     head: [["link", { rel: "icon", href: "./favicon.ico" }]],
     lastUpdated: true,
     themeConfig: {
@@ -39,6 +40,7 @@ export default defineConfig({
                     items: [
                         { text: '三维对象 Vector3', link: '/threejs/phaseB/vector3' },
                         { text: '欧拉对象 Euler', link: '/threejs/phaseB/euler' },
+                        { text: '模型材质颜色 Color 对象', link: '/threejs/phaseB/color' },
                     ]
                 }
             ],
