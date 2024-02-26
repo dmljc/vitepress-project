@@ -8,6 +8,9 @@ export default defineConfig({
     base: "/", // 自定义域名
     head: [["link", { rel: "icon", href: "./favicon.ico" }]],
     lastUpdated: true,
+    markdown: {
+        lineNumbers: true
+    },
     themeConfig: {
         logo: "/logo.png", 
         nav: [
