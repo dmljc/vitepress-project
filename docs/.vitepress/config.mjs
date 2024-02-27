@@ -44,6 +44,7 @@ export default defineConfig({
                         { text: '三维对象 Vector3', link: '/threejs/phaseB/vector3' },
                         { text: '欧拉对象 Euler', link: '/threejs/phaseB/euler' },
                         { text: '模型材质颜色 Color 对象', link: '/threejs/phaseB/color' },
+                        { text: '模型材质父类 Material对象', link: '/threejs/phaseB/fMaterial' },
                     ]
                 }
             ],
