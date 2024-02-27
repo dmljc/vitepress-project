@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "前端记事本",
+    title: "随手记",
     description: "描述信息x",
     // base: "/vitepress-project", github.io 地址需要base
     base: "/", // 自定义域名
@@ -12,7 +12,7 @@ export default defineConfig({
         lineNumbers: true
     },
     themeConfig: {
-        logo: "/logo.png", 
+        // logo: "/logo.png", 
         nav: [
             { text: "首页", link: "/" },
             { text: "3D可视化", link: "/threejs/index" },
@@ -65,7 +65,7 @@ export default defineConfig({
         // 站点页脚配置
         footer: {
             message: "Released under the MIT License",
-            copyright: "Copyright © 2024-present Zhang Fang Chao",
+            copyright: `Copyright © 2024-present Zhang Fang Chao <a href="https://beian.miit.gov.cn">浙ICP备2024066792号-1</a>`,
         },
     },
 });

@@ -3,11 +3,11 @@
 layout: home
 
 hero:
-  name: "Threejs 3D 可视化"
+  name: "Threejs随手记"
   text: "文档"
-  tagline: 此站点为本人用来记录学习的笔记本
+#   tagline: 此站点为本人用来记录学习的笔记本
   image:
-    src: /logo.png
+    # src: /logo.png
     alt: zhangfangchao
   actions:
     - theme: brand
