@@ -45,6 +45,7 @@ export default defineConfig({
                         { text: '欧拉对象 Euler', link: '/threejs/phaseB/euler' },
                         { text: '模型材质颜色 Color 对象', link: '/threejs/phaseB/color' },
                         { text: '模型材质父类 Material对象', link: '/threejs/phaseB/fMaterial' },
+                        { text: '克隆.clone()和复制.copy()', link: '/threejs/phaseB/clone' },
                     ]
                 }
             ],
