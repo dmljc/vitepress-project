@@ -22,6 +22,7 @@ export default defineConfig({
             '/threejs/': [
                 {
                     text: '基础概念',
+                    collapsed: true,
                     items: [
                         { text: '虚拟场景 Scene', link: '/threejs/phaseA/scene' },
                         { text: '虚拟相机 Camera', link: '/threejs/phaseA/camera' },
@@ -39,13 +40,14 @@ export default defineConfig({
                     ]
                 },
                 {
-                    text: '三维向量',
+                    text: '进阶概念',
                     items: [
                         { text: '三维对象 Vector3', link: '/threejs/phaseB/vector3' },
                         { text: '欧拉对象 Euler', link: '/threejs/phaseB/euler' },
                         { text: '模型材质颜色 Color 对象', link: '/threejs/phaseB/color' },
                         { text: '模型材质父类 Material对象', link: '/threejs/phaseB/fMaterial' },
                         { text: '克隆.clone()和复制.copy()', link: '/threejs/phaseB/clone' },
+                        { text: 'Group 层级模型', link: '/threejs/phaseB/group' },
                     ]
                 }
             ],
