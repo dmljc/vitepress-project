@@ -48,6 +48,7 @@ export default defineConfig({
                         { text: '模型材质父类 Material对象', link: '/threejs/phaseB/fMaterial' },
                         { text: '克隆.clone()和复制.copy()', link: '/threejs/phaseB/clone' },
                         { text: 'Group 层级模型', link: '/threejs/phaseB/group' },
+                        { text: '树结构模型', link: '/threejs/phaseB/tree' },
                     ]
                 }
             ],
