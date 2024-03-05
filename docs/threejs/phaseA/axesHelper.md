@@ -6,7 +6,7 @@ outline: deep
 
 ## 辅助观察坐标系
 
-![三维坐标系](/axesHelper.jpg)
+![三维坐标系](/phaseA/axesHelper.jpg)
 
 THREE.AxesHelper()的参数表示坐标系坐标轴线段尺寸大小，你可以根据需要改变尺寸。
 
@@ -76,4 +76,4 @@ camera.lookAt(-2000, 0, 0);
 const camera = new THREE.PerspectiveCamera(30, width / height, 1, 300);
 ```
 
-![perspective](/perspective.png)
+![perspective](/phaseA/perspective.png)

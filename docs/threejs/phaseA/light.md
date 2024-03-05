@@ -10,7 +10,7 @@ outline: deep
 
 threejs提供的网格材质，有的受光照影响，有的不受光照影响。
 
-![material](/material.svg)
+![material](/phaseA/material.svg)
 
 一个立方体长方体使用MeshLambertMaterial材质，不同面和光线夹角不同，立方体不同面就会呈现出来不同的明暗效果。
 
@@ -20,7 +20,7 @@ const material = new THREE.MeshLambertMaterial();
 ```
 ## 光源简介
 
-![光源简介](/lightIntroduce.svg)
+![光源简介](/phaseA/lightIntroduce.svg)
 
 ## 环境光
 
@@ -48,7 +48,7 @@ scene.add(directionalLight);
 
 通过点光源辅助观察对象DirectionalLightHelper可视化点光源。
 
-![平行光辅助观察对象](/directionalLightHelper.jpg)
+![平行光辅助观察对象](/phaseA/directionalLightHelper.jpg)
 
 ```js
 // light-- 被模拟的光源.
@@ -59,7 +59,7 @@ scene.add(dirLightHelper);
 ```
 ## 点光源
 
-![点光源](/lightType.png)
+![点光源](/phaseA/lightType.png)
 
 点光源PointLight可以类比为一个发光点，就像生活中一个灯泡以灯泡为中心向四周发射光线。
 

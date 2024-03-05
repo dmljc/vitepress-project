@@ -8,7 +8,7 @@ outline: deep
 
 查询threejs文档，你可以看到基础网格材质`MeshBasicMaterial`、漫反射网格材质`MeshLambertMaterial`、高光网格材质`MeshPhongMaterial`等网格材质都有一个共同的父类`Material`。
 
-![](/fMaterial.svg)
+![Material](/phaseB/material.svg)
 
 
 ## 网格材质继承父类属性

@@ -4,7 +4,7 @@ outline: deep
 
 # addFolder() 分组
 
-![光源分组](/guiGroup.jpg)
+![光源分组](/phaseA/guiGroup.jpg)
 
 new GUI() 实例化一个 gui 对象，默认创建一个总的菜单，通过 gui 对象的 `.addFolder()`方法可以创建一个子菜单，当通过 GUI 控制的属性比较多的时候，可以使用 .addFolder() 进行分组。
 

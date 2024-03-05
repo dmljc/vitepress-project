@@ -4,7 +4,7 @@ outline: deep
 
 # gui 调试界面自定义
 
-![自定义调试界面](/guiEvent.jpg)
+![自定义调试界面](/phaseA/guiEvent.jpg)
 
 ## name() 方法
 

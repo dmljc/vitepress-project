@@ -6,7 +6,7 @@ outline: deep
 
 gui.js 说白了就是一个前端js库，对HTML、CSS和JavaScript进行了封装，学习开发的时候，借助gui.js可以快速创建控制三维场景的UI交互界面，方便调试，效果如下：
 
-![gui.js](/gui.jpg)
+![gui.js](/phaseA/gui.jpg)
 
 ## 引入 gui.js
 

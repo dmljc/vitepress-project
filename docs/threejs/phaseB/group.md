@@ -4,7 +4,7 @@ outline: deep
 
 # Group层级模型(树结构)案例
 
-![Group](/group.svg)
+![Group](/phaseB/group.svg)
 
 场景对象`Scene`的子对象，除了组对象`Group`之外，还可以看到环境光`AmbientLight`、平行光`DirectionalLight`、辅助坐标对象`AxesHelper`。
 

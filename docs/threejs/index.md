@@ -5,7 +5,7 @@ outline: deep
 
 入门Three.js的第一步，就是认识 `场景Scene`、`相机Camera`、`渲染器Renderer`三个基本概念。
 
-![基础概念](/scene.png)
+![基础概念](/phaseA/scene.png)
 
 ::: code-group
 

@@ -4,7 +4,7 @@ outline: deep
 
 # 阵列立方体
 
-![阵列立方体](/matrix.jpg)
+![阵列立方体](/phaseA/matrix.jpg)
 
 ## for循环创建一列模型
 

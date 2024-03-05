@@ -33,7 +33,7 @@ camera.position.set(200, 200, 200);
 
 你用相机拍照你需要控制相机的拍照目标，具体说相机镜头对准哪个物体或说哪个坐标。对于threejs相机而言，就是设置.lookAt()方法的参数，指定一个3D坐标。
 
-![相机](/camera.png)
+![相机](/phaseA/camera.png)
 
 ```js
 // 相机观察目标指向Threejs 3D空间中某个位置
@@ -57,7 +57,7 @@ const height = 500; //高度
 
 透视投影相机的四个参数fov, aspect, near, far构成一个四棱台3D空间，被称为视锥体，只有视锥体之内的物体，才会渲染出来，视锥体范围之外的物体不会显示在Canvas画布上。
 
-![视锥体](/perspective.png)
+![视锥体](/phaseA/perspective.png)
 
 ```js
 // width和height用来设置Three.js输出的Canvas画布尺寸(像素px)

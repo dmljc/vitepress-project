@@ -4,7 +4,7 @@ outline: deep
 
 # Gui 常用的组件
 
-![常用的组件](/guiComp.jpg)
+![常用的组件](/phaseA/guiComp.jpg)
 
 ## 拖动条
 ·
