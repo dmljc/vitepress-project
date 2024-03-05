@@ -49,6 +49,7 @@ export default defineConfig({
                         { text: '克隆.clone()和复制.copy()', link: '/threejs/phaseB/clone' },
                         { text: 'Group 层级模型', link: '/threejs/phaseB/group' },
                         { text: '树结构模型', link: '/threejs/phaseB/tree' },
+                        { text: '本地坐标和世界坐标', link: '/threejs/phaseB/coordinates' },
                     ]
                 }
             ],
