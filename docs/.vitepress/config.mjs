@@ -12,7 +12,7 @@ export default defineConfig({
         lineNumbers: true
     },
     themeConfig: {
-        // logo: "/logo.png", 
+        logo: "/logo.png", 
         nav: [
             { text: "首页", link: "/" },
             { text: "3D可视化", link: "/threejs/index" },
