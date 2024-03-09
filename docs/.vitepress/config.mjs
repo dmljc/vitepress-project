@@ -51,6 +51,7 @@ export default defineConfig({
                         { text: '树结构模型', link: '/threejs/phaseB/tree' },
                         { text: '本地坐标和世界坐标', link: '/threejs/phaseB/coordinates' },
                         { text: '移除.remove()和显示隐藏visible', link: '/threejs/phaseB/remove' },
+                        { text: '顶点 UV 坐标、纹理贴图', link: '/threejs/phaseB/uv' },
                     ]
                 }
             ],
