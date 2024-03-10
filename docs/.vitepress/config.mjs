@@ -52,6 +52,8 @@ export default defineConfig({
                         { text: '本地坐标和世界坐标', link: '/threejs/phaseB/coordinates' },
                         { text: '移除.remove()和显示隐藏visible', link: '/threejs/phaseB/remove' },
                         { text: '顶点 UV 坐标、纹理贴图', link: '/threejs/phaseB/uv' },
+                        { text: '自定义顶点UV坐标', link: '/threejs/phaseB/customUV' },
+                        { text: '圆形平面设置纹理贴图', link: '/threejs/phaseB/circle' },
                     ]
                 }
             ],
