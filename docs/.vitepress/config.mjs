@@ -54,6 +54,7 @@ export default defineConfig({
                         { text: '顶点 UV 坐标、纹理贴图', link: '/threejs/phaseB/uv' },
                         { text: '自定义顶点UV坐标', link: '/threejs/phaseB/customUV' },
                         { text: '圆形平面设置纹理贴图', link: '/threejs/phaseB/circle' },
+                        { text: '矩形Mesh+背景透明png贴图', link: '/threejs/phaseB/opacity' },
                     ]
                 }
             ],
