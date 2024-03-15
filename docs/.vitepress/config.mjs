@@ -56,6 +56,7 @@ export default defineConfig({
                         { text: '圆形平面设置纹理贴图', link: '/threejs/phaseB/circle' },
                         { text: '矩形Mesh+背景透明png贴图', link: '/threejs/phaseB/opacity' },
                         { text: 'UV 动画 offset', link: '/threejs/phaseB/uvOffset' },
+                        { text: '加载外部三维模型 gltf', link: '/threejs/phaseB/3dModel' },
                     ]
                 }
             ],
