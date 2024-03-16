@@ -41,6 +41,7 @@ export default defineConfig({
                 },
                 {
                     text: '进阶概念',
+                    collapsed: true,
                     items: [
                         { text: '三维对象 Vector3', link: '/threejs/phaseB/vector3' },
                         { text: '欧拉对象 Euler', link: '/threejs/phaseB/euler' },
@@ -56,9 +57,16 @@ export default defineConfig({
                         { text: '圆形平面设置纹理贴图', link: '/threejs/phaseB/circle' },
                         { text: '矩形Mesh+背景透明png贴图', link: '/threejs/phaseB/opacity' },
                         { text: 'UV 动画 offset', link: '/threejs/phaseB/uvOffset' },
-                        { text: '加载外部三维模型 gltf', link: '/threejs/phaseB/3dModel' },
                     ]
-                }
+                },
+                {
+                    text: 'Blender 3D 建模',
+                    items: [
+                        { text: '三维模型gltf介绍', link: '/threejs/phaseC/3dModel' },
+                        { text: 'Threejs 加载.gltf文件', link: '/threejs/phaseC/gltfLoad' },
+                        { text: 'gltf 不同文件形式', link: '/threejs/phaseC/pattern' },
+                    ]
+                },
             ],
         },
         socialLinks: [
