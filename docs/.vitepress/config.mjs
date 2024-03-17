@@ -62,6 +62,8 @@ export default defineConfig({
                 {
                     text: 'Blender 3D 建模',
                     items: [
+                        { text: 'Blender 基本介绍', link: '/threejs/phaseC/blender' },
+                        { text: 'Blender 基本操作', link: '/threejs/phaseC/operate' },
                         { text: '三维模型gltf介绍', link: '/threejs/phaseC/3dModel' },
                         { text: 'Threejs 加载.gltf文件', link: '/threejs/phaseC/gltfLoad' },
                         { text: 'gltf 不同文件形式', link: '/threejs/phaseC/pattern' },
