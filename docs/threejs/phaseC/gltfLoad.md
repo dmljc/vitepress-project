@@ -12,6 +12,14 @@ outline: deep
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 ```
 
+按照上面的路径引入的话ts会报错
+
+![notFindGLTGLoader](/phaseC/notFindGLTGLoader.png)
+
+```js
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+```
+
 ## gltf 加载器 new GLTFLoader()
 
 执行`new GLTFLoader()`就可以实例化一个 gltf 的加载器对象。

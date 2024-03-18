@@ -67,6 +67,7 @@ export default defineConfig({
                         { text: '三维模型gltf介绍', link: '/threejs/phaseC/3dModel' },
                         { text: 'Threejs 加载.gltf文件', link: '/threejs/phaseC/gltfLoad' },
                         { text: 'gltf 不同文件形式', link: '/threejs/phaseC/pattern' },
+                        { text: '纹理贴图错位', link: '/threejs/phaseC/attribute' },
                     ]
                 },
             ],
