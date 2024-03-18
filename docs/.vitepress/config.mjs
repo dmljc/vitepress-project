@@ -61,6 +61,7 @@ export default defineConfig({
                 },
                 {
                     text: 'Blender 3D 建模',
+                    collapsed: true,
                     items: [
                         { text: 'Blender 基本介绍', link: '/threejs/phaseC/blender' },
                         { text: 'Blender 基本操作', link: '/threejs/phaseC/operate' },
@@ -68,6 +69,12 @@ export default defineConfig({
                         { text: 'Threejs 加载.gltf文件', link: '/threejs/phaseC/gltfLoad' },
                         { text: 'gltf 不同文件形式', link: '/threejs/phaseC/pattern' },
                         { text: '纹理贴图错位', link: '/threejs/phaseC/attribute' },
+                    ]
+                },
+                {
+                    text: 'PBR 材质与纹理贴图',
+                    items: [
+                        { text: 'PBR 材质简介', link: '/threejs/phaseD/PBR' },
                     ]
                 },
             ],
