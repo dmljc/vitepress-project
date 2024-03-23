@@ -31,3 +31,53 @@ const textureCube = new THREE.CubeTextureLoader()
 ```
 
 ## MeshStandardMaterial环境贴图属性.envMap
+
+实际生活中，一个物体表面，往往会反射周围的环境。人的眼睛看到的东西，往往反射有周围景物，所以three.js渲染模型，如果想渲染效果更好看，如果想更符合实际生活情况，也需要想办法让模型反射周围景物。
+
+`MeshStandardMaterial`材质的环境贴图属性是`.envMap`，通过`PBR`材质的`贴图属性`可以实现模型表面`反射周围景物`，这样渲染效果更好。
+
+```js
+// 加载环境贴图
+const textureCube = new THREE.CubeTextureLoader()
+    .setPath('./环境贴图/环境贴图0/')
+    .load(['px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg']);
+obj.material = new THREE.MeshStandardMaterial({
+    metalness: 1.0,
+    roughness: 0.5,
+    envMap: textureCube, //设置pbr材质环境贴图
+})    
+```
+
+```js
+obj.material.envMap = textureCube; //设置环境贴图 
+```
+
+## 环境贴图反射率.envMapIntensity
+
+`MeshStandardMaterial`的`.envMapIntensity`属性主要用来设置模型表面反射周围环境贴图的能力，或者说环境贴图对模型表面的影响能力。具体说`.envMapIntensity`相当于`环境贴图的系数`，环境贴图像素值乘以该系数后，在用于影响模型表面。
+
+```js
+// 默认值1, 设置为0.0，相当于没有环境贴图
+obj.material.envMapIntensity = 1.0;
+```
+
+## 粗糙度roughness为0
+
+你可以尝试把粗糙度`roughness`设置为0，看看模型对环境贴图的反射效果。
+
+```js
+obj.material.roughness = 0.0; // 完全镜面反射，像镜子一样
+```
+
+## 选择合适的环境贴图
+
+不同的明暗或景物的环境贴图对渲染效果的影响是不一样的，所以不仅要设置环境贴图，还要根据需要选择合适的环境贴图，一般实际开发使用美术提供的环境贴图即可。
+
+你可以尝试测试源码中提供多个环境贴图对比渲染效果差异。
+
+## 纹理和渲染器颜色空间一致
+
+```js
+// 如果renderer.outputEncoding=THREE.sRGBEncoding;环境贴图需要保持一致
+textureCube.encoding = THREE.sRGBEncoding;   
+```

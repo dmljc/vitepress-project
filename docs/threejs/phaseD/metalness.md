@@ -6,9 +6,9 @@ outline: deep
 
 ## 金属度metalness
 
-`金属度`属性`.metalness`表示材质像金属的程度,非金属材料,如木材或石材,使用0.0,金属使用1.0。
+`金属度`属性`.metalness`表示材质像金属的程度，非金属材料如木材、石材使用0.0，金属使用1.0。
 
-threejs的`PBR材`质，`.metalness`默认是`0.5`,0.0到1.0之间的值可用于生锈的金属外观。
+threejs的`PBR材`质，`.metalness`默认是`0.5`，0.0到1.0之间的值可用于生锈的金属外观。
 
 ```js
 new THREE.MeshStandardMaterial({
