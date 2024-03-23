@@ -75,9 +75,30 @@ obj.material.roughness = 0.0; // 完全镜面反射，像镜子一样
 
 你可以尝试测试源码中提供多个环境贴图对比渲染效果差异。
 
-## 纹理和渲染器颜色空间一致
+<!-- ## 纹理和渲染器颜色空间一致
 
 ```js
 // 如果renderer.outputEncoding=THREE.sRGBEncoding;环境贴图需要保持一致
 textureCube.encoding = THREE.sRGBEncoding;   
+``` -->
+
+## 场景环境属性.environment
+
+网格模型可以通过材质的`.envMap`属性设置环境贴图，如果一个`gltf`模型中`所有的Mesh`都要设置环境贴图就需要`递归遍历`gltf模型，给里面每个Mesh的材质设置`.envMap`。
+
+```js
+loader.load("../工厂.glb", function (gltf) {
+    // 递归遍历批量设置环境贴图
+    gltf.scene.traverse(function (obj) {
+        if (obj.isMesh) { //判断是否是网格模型
+            obj.material.envMap = textureCube; //设置环境贴图
+        }
+    });
+})
+```
+
+如果你希望环境贴图影响场景中`scene`所有`Mesh`，可以通过`Scene`的场景环境属性`.environment`实现，把环境贴图对应纹理对象设置为`.environment`的属性值即可。
+
+```js
+scene.environment = textureCube;
 ```
