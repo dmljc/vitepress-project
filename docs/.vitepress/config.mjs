@@ -77,6 +77,7 @@ export default defineConfig({
                         { text: 'PBR 材质简介', link: '/threejs/phaseD/PBR' },
                         { text: 'PBR 材质金属度和粗糙度', link: '/threejs/phaseD/metalness' },
                         { text: '环境贴图.envMap（金属效果）', link: '/threejs/phaseD/envMap' },
+                        { text: '清漆层属性.clearcoat(车漆效果）', link: '/threejs/phaseD/clearcoat' },
                     ]
                 },
             ],
