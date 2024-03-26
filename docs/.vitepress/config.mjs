@@ -89,6 +89,7 @@ export default defineConfig({
                         { text: 'UI交互界面与Canvas画布叠加', link: '/threejs/phaseE/zIndex.md' },
                         { text: 'UI交互按钮与3D场景交互', link: '/threejs/phaseE/click.md' },
                         { text: 'Three.js背景透明度', link: '/threejs/phaseE/alpha.md' },
+                        { text: 'Three.js渲染结果保存为图片', link: '/threejs/phaseE/save.md' },
                     ]
                 },
             ],
