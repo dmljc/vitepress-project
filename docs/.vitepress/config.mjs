@@ -87,6 +87,7 @@ export default defineConfig({
                     items: [
                         { text: 'Canvas 画布介绍', link: '/threejs/phaseE/basic.md' },
                         { text: 'UI交互界面与Canvas画布叠加', link: '/threejs/phaseE/zIndex.md' },
+                        { text: 'UI交互按钮与3D场景交互', link: '/threejs/phaseE/click.md' },
                     ]
                 },
             ],

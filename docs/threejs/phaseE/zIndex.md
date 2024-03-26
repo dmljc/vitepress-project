@@ -37,7 +37,7 @@ renderer.domElement.style.zIndex = -1;
 <div style="color: #ff0000; z-index:2; position: relative;">红色</div>
 ```
 
-注意默认的定位 position: static，设置z-index无效。
+注意默认的定位`position: static`，设置`z-index无效`。
 
 ## 插入的div元素绝对定位
 
