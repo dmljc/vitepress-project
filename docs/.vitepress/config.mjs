@@ -91,6 +91,7 @@ export default defineConfig({
                         { text: 'Three.js背景透明度', link: '/threejs/phaseE/alpha.md' },
                         { text: 'Three.js渲染结果保存为图片', link: '/threejs/phaseE/save.md' },
                         { text: '深度冲突(模型闪烁)', link: '/threejs/phaseE/conflict.md' },
+                        { text: '模型加载进度条', link: '/threejs/phaseE/progress.md' },
                     ]
                 },
             ],
