@@ -84,6 +84,7 @@ export default defineConfig({
                 },
                 {
                     text: 'Canvas 画布',
+                    collapsed: true,
                     items: [
                         { text: 'Canvas 画布介绍', link: '/threejs/phaseE/basic.md' },
                         { text: 'UI交互界面与Canvas画布叠加', link: '/threejs/phaseE/zIndex.md' },
@@ -94,6 +95,14 @@ export default defineConfig({
                         { text: '模型加载进度条', link: '/threejs/phaseE/progress.md' },
                     ]
                 },
+                {
+                    text: 'Curve',
+                    items: [
+                        {
+                            text: '生成曲线、几何体', link: '/threejs/phaseF/point.md'
+                        }
+                    ]
+                }
             ],
         },
         socialLinks: [
