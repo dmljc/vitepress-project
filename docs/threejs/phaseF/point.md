@@ -88,7 +88,7 @@ for (let i = 0; i < N + 1; i++) {
 
 ::: code-group
 
-```vue:line-numbers [index.vue]
+```vue [index.vue]
 <template>
     <div ref="curve"></div>
 </template>
@@ -165,7 +165,7 @@ render();
 </script>
 ```
 
-```js:line-numbers [model.js]
+```js [model.js]
 import * as THREE from 'three';
 
 // 创建一个几何体对象
