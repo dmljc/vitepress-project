@@ -102,6 +102,7 @@ export default defineConfig({
                         { text: '几何体方法.setFromPoints()', link: '/threejs/phaseF/setFromPoints.md' },
                         { text: '曲线Curve简介', link: '/threejs/phaseF/brief.md' },
                         { text: '椭圆和圆弧线绘制', link: '/threejs/phaseF/ellipse.md' },
+                        { text: '2D、3D样条曲线', link: '/threejs/phaseF/spline.md' },
                     ]
                 }
             ],
