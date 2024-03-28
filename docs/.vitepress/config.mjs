@@ -96,10 +96,11 @@ export default defineConfig({
                     ]
                 },
                 {
-                    text: '生成曲线，几何体',
+                    text: '生成曲线和几何体',
                     items: [
                         { text: '生成圆弧顶点', link: '/threejs/phaseF/point.md' },
                         { text: '几何体方法.setFromPoints()', link: '/threejs/phaseF/setFromPoints.md' },
+                        { text: '曲线Curve简介', link: '/threejs/phaseF/brief.md' },
                     ]
                 }
             ],
