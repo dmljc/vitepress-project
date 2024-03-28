@@ -101,6 +101,7 @@ export default defineConfig({
                         { text: '生成圆弧顶点', link: '/threejs/phaseF/point.md' },
                         { text: '几何体方法.setFromPoints()', link: '/threejs/phaseF/setFromPoints.md' },
                         { text: '曲线Curve简介', link: '/threejs/phaseF/brief.md' },
+                        { text: '椭圆和圆弧线绘制', link: '/threejs/phaseF/ellipse.md' },
                     ]
                 }
             ],
