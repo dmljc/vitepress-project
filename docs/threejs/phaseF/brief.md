@@ -18,7 +18,7 @@ threejs的长方体`BoxGeometry`、球体`SphereGeometry`等几何体都是基�
 
 ```js
 // 参数1和2表示椭圆中心坐标 参数3和4表示x和y方向半径
-const arc = new THREE.EllipseCurve(0, 0, 20, 10);
+const arc = new THREE.EllipseCurve(0, 0, 100, 50);
 ```
 
 ## 曲线Curve方法.getPoints()
@@ -86,38 +86,27 @@ const line = new THREE.Line(geometry, material);
 import * as THREE from 'three';
 
 // 绘制椭圆弧线
-// 参数1和2表示椭圆中心坐标，参数3和4表示x和y方向半径
-const arc = new THREE.EllipseCurve(0, 0, 20, 10);
+const arc = new THREE.EllipseCurve(0, 0, 100, 50, 0, Math.PI, false);
 
-// getPoints 返回Vector2 对象作为元素组成的数组; 
-// 分段数50，返回51个顶点
+// 获取椭圆上的顶点数据
 const pointsArr = arc.getPoints(50);
 
-// getSpacedPoints 函数表示 曲线上等间距取点
-// const pointsArr = arc.getSpacedPoints(50);
-
+// 创建空材质对象
 const geometry = new THREE.BufferGeometry();
 
-// 把数组 pointsArr 里的坐标数据取出来，给 geometry.attributes.position 赋值
+// 把椭圆上的顶点数据赋值给材质对象
 geometry.setFromPoints(pointsArr);
 
-// 点材质
-const material = new THREE.PointsMaterial({
-    color: 0xffff00,
-    size: 1 //点对象像素尺寸
+// 创建线材质
+const material = new THREE.LineBasicMaterial({
+    color: 0x00ffff,
+    side: 2
 });
 
-// 点模型
-const points = new THREE.Points(geometry, material);
+// 创建线模型
+const model = new THREE.Line(geometry, material);
 
-// 线材质
-// const material = new THREE.LineBasicMaterial({
-//     color: 0x00fffff,
-// });
-// 线模型
-// const line = new THREE.Line(geometry, material);
-
-export default points;
+export default model;
 ```
 :::
 

@@ -57,9 +57,9 @@ const model = new THREE.Line(geometry, material);
 ```js
 // 二维向量Vector2创建一组顶点坐标
 const arr = [
-    new THREE.Vector2(-10, 0),
-    new THREE.Vector2(0, 3),
-    new THREE.Vector2(10, 0),
+    new THREE.Vector2(-100, 0),
+    new THREE.Vector2(0, 30), 
+    new THREE.Vector2(100, 0),
 ];
 // 二维样条曲线
 const curve = new THREE.SplineCurve(arr);
@@ -79,22 +79,18 @@ import * as THREE from 'three';
 
 // 三维向量Vector3创建一组顶点坐标
 // const arr = [
-//     new THREE.Vector3(-5, 2, 9),
-//     new THREE.Vector3(-1, 4, 4),
+//     new THREE.Vector3(-50, 20, 90),
+//     new THREE.Vector3(-10, 40, 40),
 //     new THREE.Vector3(0, 0, 0),
-//     new THREE.Vector3(6, -6, 0),
-//     new THREE.Vector3(7, 0, 8)
+//     new THREE.Vector3(60, -60, 0),
+//     new THREE.Vector3(70, 0, 80)
 // ];
 
-// // 创建三维样条曲线
+// 创建三维样条曲线
 // const curve = new THREE.CatmullRomCurve3(arr);
 
 // 二维向量Vector2创建一组顶点坐标
-const arr = [
-    new THREE.Vector2(-10, 0),
-    new THREE.Vector2(0, 3),
-    new THREE.Vector2(10, 0),
-];
+const arr = [new THREE.Vector2(-100, 0), new THREE.Vector2(0, 30), new THREE.Vector2(100, 0)];
 // 二维样条曲线
 const curve = new THREE.SplineCurve(arr);
 
@@ -109,7 +105,7 @@ geometry.setFromPoints(pointsArr);
 
 // 创建点材质
 // const material = new THREE.PointsMaterial({
-//     color: 0xff0000,
+//     color: 0x00ffff,
 // });
 
 // 创建点模型
@@ -117,7 +113,7 @@ geometry.setFromPoints(pointsArr);
 
 // 创建线材质
 const material = new THREE.LineBasicMaterial({
-    color: 0x000000
+    color: 0x00ffff
 });
 
 // 创建线模型

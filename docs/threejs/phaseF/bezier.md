@@ -13,7 +13,7 @@ outline: deep
 ```js
 // p1、p2、p3表示三个点坐标
 // p1、p3是曲线起始点，p2是曲线的控制点
-const p1 = new THREE.Vector2(-8, 0);
-const p2 = new THREE.Vector2(2, 10);
-const p3 = new THREE.Vector2(8, 0);
+const p1 = new THREE.Vector2(-80, 0);
+const p2 = new THREE.Vector2(20, 100);
+const p3 = new THREE.Vector2(80, 0);
 ```

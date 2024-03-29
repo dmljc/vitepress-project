@@ -106,12 +106,12 @@ const scene = new THREE.Scene();
 scene.add(model);
 
 // 辅助观察坐标系
-const axesHelper = new THREE.AxesHelper(20);
+const axesHelper = new THREE.AxesHelper(100);
 scene.add(axesHelper);
 
 // 灯光
 const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-directionalLight.position.set(50, 50, 50);
+directionalLight.position.set(100, 60, 50);
 scene.add(directionalLight);
 
 // 环境光
@@ -122,7 +122,7 @@ scene.add(ambientLight);
 const width = window.innerWidth - 296;
 const height = window.innerHeight - 136;
 const camera = new THREE.PerspectiveCamera(30, width / height, 1, 3000);
-camera.position.set(40.0, 40.0, 40.0);
+camera.position.set(40, 122, 390);
 camera.lookAt(0, 0, 0);
 
 // 渲染器
@@ -172,7 +172,7 @@ import * as THREE from 'three';
 const geometry = new THREE.BufferGeometry();
 
 // 定义圆弧半径
-const R = 10;
+const R = 50;
 // 定义分段数量
 const N = 50;
 
@@ -181,11 +181,15 @@ const arr = [];
 // 两个相邻点间隔弧度
 const sp = (2 * Math.PI) / N;
 
+// 设置圆心坐标
+const cx = 50;
+const cy = 50;
+
 for (let i = 0; i < N + 1; i++) {
     const angle = sp * i;
     // 以坐标原点为中心，在XOY平面上生成圆弧上的顶点数据
-    const x = R * Math.cos(angle);
-    const y = R * Math.sin(angle);
+    const x = cx + R * Math.cos(angle);
+    const y = cy + R * Math.sin(angle);
     arr.push(x, y, 0);
 }
 
@@ -198,12 +202,12 @@ geometry.attributes.position = attribue;
 
 // 线材质
 const material = new THREE.LineBasicMaterial({
-    color: 0xff0000
+    color: 0x00ffff
 });
 
 // 创建线模型对象 Line、LineLoop、LineSegments
-const line = new THREE.Line(geometry, material);
+const model = new THREE.Line(geometry, material);
 
-export default line;
+export default model;
 ```
 :::
