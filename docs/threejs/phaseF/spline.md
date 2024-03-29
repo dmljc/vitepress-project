@@ -39,12 +39,30 @@ const material = new THREE.LineBasicMaterial({
 const model = new THREE.Line(geometry, material);
 ```
 
-## 点模型可视化曲线经过的点
+<!-- ## 点模型可视化曲线经过的点
 
 点模型可视化曲线经过的点，验证样条曲线是否经过数数组arr表示的几个顶点坐标。
 
-![splinePoints](/phaseF/splinePoints.jpg)  
+![splinePoints](/phaseF/splinePoints.jpg)   -->
 
+## 用点模型可视化样条曲线经过的顶点位置
+
+![pointsZB](/phaseF/pointsZB.jpg)
+
+```js
+const geometryPoints = new THREE.BufferGeometry();
+geometryPoints.setFromPoints(arr);
+
+const materialPoints = new THREE.PointsMaterial({
+    color: 0xff00ff,
+    size: 10
+});
+
+const points = new THREE.Points(geometryPoints, materialPoints);
+
+const group = new THREE.Group();
+group.add(line, points);
+```
 ## 2D样条曲线
 
 `CatmullRomCurve3`是3D样条曲线API，曲线经过的点可以在3D空间中任何一个位置，二维样条曲线`SplineCurve`默认情况下就是在`XOY平面`生成一个平面的样条曲线。
@@ -78,21 +96,21 @@ const curve = new THREE.SplineCurve(arr);
 import * as THREE from 'three';
 
 // 三维向量Vector3创建一组顶点坐标
-// const arr = [
-//     new THREE.Vector3(-50, 20, 90),
-//     new THREE.Vector3(-10, 40, 40),
-//     new THREE.Vector3(0, 0, 0),
-//     new THREE.Vector3(60, -60, 0),
-//     new THREE.Vector3(70, 0, 80)
-// ];
+const arr = [
+    new THREE.Vector3(-50, 20, 90),
+    new THREE.Vector3(-10, 40, 40),
+    new THREE.Vector3(0, 0, 0),
+    new THREE.Vector3(60, -60, 0),
+    new THREE.Vector3(70, 0, 80)
+];
 
 // 创建三维样条曲线
-// const curve = new THREE.CatmullRomCurve3(arr);
+const curve = new THREE.CatmullRomCurve3(arr);
 
 // 二维向量Vector2创建一组顶点坐标
-const arr = [new THREE.Vector2(-100, 0), new THREE.Vector2(0, 30), new THREE.Vector2(100, 0)];
+// const arr = [new THREE.Vector2(-100, 0), new THREE.Vector2(0, 30), new THREE.Vector2(100, 0)];
 // 二维样条曲线
-const curve = new THREE.SplineCurve(arr);
+// const curve = new THREE.SplineCurve(arr);
 
 // 从曲线上获取顶点坐标
 const pointsArr = curve.getPoints(50);
@@ -103,21 +121,27 @@ const geometry = new THREE.BufferGeometry();
 // 把曲线上获取的顶点坐标赋值给几何体对象
 geometry.setFromPoints(pointsArr);
 
-// 创建点材质
-// const material = new THREE.PointsMaterial({
-//     color: 0x00ffff,
-// });
-
-// 创建点模型
-// const model = new THREE.Points(geometry, material);
-
 // 创建线材质
 const material = new THREE.LineBasicMaterial({
     color: 0x00ffff
 });
 
 // 创建线模型
-const model = new THREE.Line(geometry, material);
+const line = new THREE.Line(geometry, material);
 
-export default model;
+// 用点模型可视化样条曲线经过的顶点位置
+const geometryPoints = new THREE.BufferGeometry();
+geometryPoints.setFromPoints(arr);
+
+const materialPoints = new THREE.PointsMaterial({
+    color: 0xff00ff,
+    size: 10
+});
+
+const points = new THREE.Points(geometryPoints, materialPoints);
+
+const group = new THREE.Group();
+group.add(line, points);
+
+export default group;
 :::
