@@ -103,6 +103,7 @@ export default defineConfig({
                         { text: '曲线Curve简介', link: '/threejs/phaseF/brief.md' },
                         { text: '椭圆和圆弧线绘制', link: '/threejs/phaseF/ellipse.md' },
                         { text: '2D、3D样条曲线', link: '/threejs/phaseF/spline.md' },
+                        { text: '贝塞尔曲线', link: '/threejs/phaseF/bezier.md' },
                     ]
                 }
             ],
