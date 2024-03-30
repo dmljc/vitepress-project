@@ -105,6 +105,7 @@ export default defineConfig({
                         { text: '2D、3D样条曲线', link: '/threejs/phaseF/spline.md' },
                         { text: '贝塞尔曲线', link: '/threejs/phaseF/bezier.md' },
                         { text: '贝塞尔曲线的应用', link: '/threejs/phaseF/application.md' },
+                        { text: '组合曲线CurvePath拼接曲线', link: '/threejs/phaseF/curvePath.md' },
                     ]
                 }
             ],
