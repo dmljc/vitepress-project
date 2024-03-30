@@ -104,6 +104,7 @@ export default defineConfig({
                         { text: '椭圆和圆弧线绘制', link: '/threejs/phaseF/ellipse.md' },
                         { text: '2D、3D样条曲线', link: '/threejs/phaseF/spline.md' },
                         { text: '贝塞尔曲线', link: '/threejs/phaseF/bezier.md' },
+                        { text: '贝塞尔曲线的应用', link: '/threejs/phaseF/application.md' },
                     ]
                 }
             ],
