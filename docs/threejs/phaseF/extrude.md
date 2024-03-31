@@ -8,6 +8,10 @@ outline: deep
 
 ![extrude](/phaseF/extrude.png)
 
+## 成品效果
+
+![extrude](/phaseF/extrude.jpg)
+
 ## 定义一个 Shape 轮廓
 
 使用拉伸扫描`ExtrudeGeometry`和轮廓填充`ShapeGeometry`一样，需要首先定义一个用于拉伸或扫描的平面轮廓`Shape`。
@@ -61,7 +65,7 @@ const geometry = new THREE.ExtrudeGeometry(shape, {
 });
 ```
 
-## 拉伸禁止默认倒角
+### 禁止倒角
 
 ```js
 // 拉伸造型
