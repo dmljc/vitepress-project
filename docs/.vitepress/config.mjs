@@ -110,6 +110,7 @@ export default defineConfig({
                         { text: '旋转成型LatheGeometry', link: '/threejs/phaseF/lathe.md' },
                         { text: '旋转成型LatheGeometry', link: '/threejs/phaseF/lathe.md' },
                         { text: '轮廓填充ShapeGeometry', link: '/threejs/phaseF/shape.md' },
+                        { text: '拉伸ExtrudeGeometry', link: '/threejs/phaseF/extrude.md' },
                     ]
                 }
             ],
