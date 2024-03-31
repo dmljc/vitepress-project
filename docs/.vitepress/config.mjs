@@ -108,6 +108,8 @@ export default defineConfig({
                         { text: '组合曲线CurvePath拼接曲线', link: '/threejs/phaseF/curvePath.md' },
                         { text: '曲线路径管道TubeGeometry', link: '/threejs/phaseF/tube.md' },
                         { text: '旋转成型LatheGeometry', link: '/threejs/phaseF/lathe.md' },
+                        { text: '旋转成型LatheGeometry', link: '/threejs/phaseF/lathe.md' },
+                        { text: '轮廓填充ShapeGeometry', link: '/threejs/phaseF/shape.md' },
                     ]
                 }
             ],
