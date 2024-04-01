@@ -113,6 +113,7 @@ export default defineConfig({
                         { text: '拉伸ExtrudeGeometry', link: '/threejs/phaseF/extrude.md' },
                         { text: '扫描ExtrudeGeometry', link: '/threejs/phaseF/extrudePath.md' },
                         { text: '多边形轮廓Shape简介', link: '/threejs/phaseF/shapePath.md' },
+                        { text: '多边形轮廓Shape(圆弧)', link: '/threejs/phaseF/shapeArc.md' },
                     ]
                 }
             ],
