@@ -115,6 +115,7 @@ export default defineConfig({
                         { text: '多边形轮廓Shape简介', link: '/threejs/phaseF/shapePath.md' },
                         { text: '多边形轮廓Shape(圆弧)', link: '/threejs/phaseF/shapeArc.md' },
                         { text: '多边形Shape(内孔.holes)', link: '/threejs/phaseF/holes.md' },
+                        { text: '模型边界线EdgesGeometry', link: '/threejs/phaseF/edges.md' },
                     ]
                 }
             ],
