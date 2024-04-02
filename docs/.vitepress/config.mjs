@@ -114,6 +114,7 @@ export default defineConfig({
                         { text: '扫描ExtrudeGeometry', link: '/threejs/phaseF/extrudePath.md' },
                         { text: '多边形轮廓Shape简介', link: '/threejs/phaseF/shapePath.md' },
                         { text: '多边形轮廓Shape(圆弧)', link: '/threejs/phaseF/shapeArc.md' },
+                        { text: '多边形Shape(内孔.holes)', link: '/threejs/phaseF/holes.md' },
                     ]
                 }
             ],
