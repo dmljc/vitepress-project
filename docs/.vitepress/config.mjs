@@ -120,6 +120,7 @@ export default defineConfig({
                         { text: '一段曲线颜色渐变', link: '/threejs/phaseF/curveColor.md' },
                         { text: 'Color颜色渐变插值', link: '/threejs/phaseF/lerpColors.md' },
                         { text: '查看或设置gltf几何体顶点', link: '/threejs/phaseF/gltfPoints.md' },
+                        { text: '山脉地形高度可视化', link: '/threejs/phaseF/mountain.md' },
                     ]
                 }
             ],
