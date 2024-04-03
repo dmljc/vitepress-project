@@ -119,6 +119,7 @@ export default defineConfig({
                         { text: '几何体顶点颜色数数据', link: '/threejs/phaseF/pointColor.md' },
                         { text: '一段曲线颜色渐变', link: '/threejs/phaseF/curveColor.md' },
                         { text: 'Color颜色渐变插值', link: '/threejs/phaseF/lerpColors.md' },
+                        { text: '查看或设置gltf几何体顶点', link: '/threejs/phaseF/gltfPoints.md' },
                     ]
                 }
             ],
