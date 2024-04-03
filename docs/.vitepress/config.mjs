@@ -117,6 +117,7 @@ export default defineConfig({
                         { text: '多边形Shape(内孔.holes)', link: '/threejs/phaseF/holes.md' },
                         { text: '模型边界线EdgesGeometry', link: '/threejs/phaseF/edges.md' },
                         { text: '几何体顶点颜色数数据', link: '/threejs/phaseF/pointColor.md' },
+                        { text: '一段曲线颜色渐变', link: '/threejs/phaseF/curveColor.md' },
                     ]
                 }
             ],
