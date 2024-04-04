@@ -97,6 +97,7 @@ export default defineConfig({
                 },
                 {
                     text: '生成曲线和几何体',
+                    collapsed: true,
                     items: [
                         { text: '生成圆弧顶点', link: '/threejs/phaseF/point.md' },
                         { text: '几何体方法.setFromPoints()', link: '/threejs/phaseF/setFromPoints.md' },
@@ -121,6 +122,12 @@ export default defineConfig({
                         { text: 'Color颜色渐变插值', link: '/threejs/phaseF/lerpColors.md' },
                         { text: '查看或设置gltf几何体顶点', link: '/threejs/phaseF/gltfPoints.md' },
                         { text: '山脉地形高度可视化', link: '/threejs/phaseF/mountain.md' },
+                    ]
+                },
+                {
+                    text: '相机基础',
+                    items: [
+                        { text: 'xx', link: '/threejs/phaseG/orthographicCamera.md'}
                     ]
                 }
             ],
