@@ -128,7 +128,8 @@ export default defineConfig({
                     text: '相机基础',
                     items: [
                         { text: '正投影相机', link: '/threejs/phaseG/orthographicCamera.md'},
-                        { text: '正投影相机-Canvas尺寸变化', link: '/threejs/phaseG/canvas.md'}
+                        { text: '正投影相机-Canvas尺寸变化', link: '/threejs/phaseG/canvas.md'},
+                        { text: '包围盒Box3', link: '/threejs/phaseG/box3.md'},
                     ]
                 }
             ],
