@@ -131,6 +131,7 @@ export default defineConfig({
                         { text: '正投影相机-Canvas尺寸变化', link: '/threejs/phaseG/canvas.md'},
                         { text: '包围盒Box3', link: '/threejs/phaseG/box3.md'},
                         { text: '地图案例(包围盒、正投影)', link: '/threejs/phaseG/map.md'},
+                        { text: '相机动画(.position和.lookAt())', link: '/threejs/phaseG/animation.md'},
                     ]
                 }
             ],
