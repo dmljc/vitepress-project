@@ -2,14 +2,14 @@
 outline: deep
 ---
 
-# UI交互按钮与3D场景交互
+# UI 交互按钮与 3D 场景交互
 
-实际开发的时候，往往会通过前端HTML、CSS代码创建按钮等交互界面，用来与3D场景交互。
-如果你是用vue或react开发web3d项目，也可以不用HTML、CSS自己写，可以使用UI组件库。
+实际开发的时候，往往会通过前端 HTML、CSS 代码创建按钮等交互界面，用来与 3D 场景交互。
+如果你是用 vue 或 react 开发 web3d 项目，也可以不用 HTML、CSS 自己写，可以使用 UI 组件库。
 
 ![event](/phaseE/event.jpg)
 
-## UI按钮改变Mesh颜色
+## UI 按钮改变 Mesh 颜色
 
 ::: code-group
 
@@ -46,6 +46,3 @@ const changeColor = (color: number) => {
     mesh.material.color.set(color);
 };
 ```
-
-
-

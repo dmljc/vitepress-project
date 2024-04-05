@@ -1,9 +1,10 @@
 ---
 outline: deep
 ---
+
 # 基础概念
 
-入门Three.js的第一步，就是认识 `场景Scene`、`相机Camera`、`渲染器Renderer`三个基本概念。
+入门 Three.js 的第一步，就是认识 `场景Scene`、`相机Camera`、`渲染器Renderer`三个基本概念。
 
 ![基础概念](/phaseA/scene.png)
 
@@ -15,7 +16,7 @@ outline: deep
 </template>
 ```
 
-```ts:line-numbers{0} [script.ts] 
+```ts:line-numbers{0} [script.ts]
 <script lang="ts" setup>
 import { onMounted } from 'vue';
 import * as THREE from 'three';
@@ -32,7 +33,7 @@ const material = new THREE.MeshLambertMaterial({ // 创建一个材质对象
     color: '#f66' // 设置材质颜色
 });
 // 使用 几何体 和 材质对象 创建一个网格模型，表示生活中的一个物体
-const mesh = new THREE.Mesh(geometry, material); 
+const mesh = new THREE.Mesh(geometry, material);
 mesh.position.set(0, 0, 0); // 设置网格模型在三维空间中的位置坐标，默认是坐标原点
 scene.add(mesh); // 把网格模型添加到场景中
 /*
@@ -41,16 +42,16 @@ scene.add(mesh); // 把网格模型添加到场景中
 const axesHelper = new THREE.AxesHelper(200);
 scene.add(axesHelper); // 把坐标轴添加到场景中
 /*
- * 添加光源 
+ * 添加光源
  */
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.4); // 环境光
 scene.add(ambientLight);
- 
+
 const pointLight = new THREE.PointLight(0xffffff, 1); // 点光源
 pointLight.position.set(200, 300, 400);
 scene.add(pointLight);
 
-const pointLightHelper = new THREE.PointLightHelper(pointLight, 20, 0xff0000);// 点光源辅助观察 
+const pointLightHelper = new THREE.PointLightHelper(pointLight, 20, 0xff0000);// 点光源辅助观察
 scene.add(pointLightHelper);
 /*
  * 创建透视投影相机
@@ -108,4 +109,5 @@ onMounted(() => {
 }
 </style>
 ```
+
 :::

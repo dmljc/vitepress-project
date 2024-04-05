@@ -4,7 +4,7 @@ outline: deep
 
 # 样条、贝塞尔曲线应用
 
-曲线API在大屏可视化中的应用如下：
+曲线 API 在大屏可视化中的应用如下：
 
 表示一个`飞线曲线轨迹`有多重方案，`圆弧`、`椭圆弧`、`贝塞尔`、`样条`...
 
@@ -13,11 +13,11 @@ outline: deep
 ![application1](/phaseF/application1.jpg)
 ![application2](/phaseF/application2.jpg)
 
-## 三维样条曲线CatmullRomCurve3实现飞线轨迹
+## 三维样条曲线 CatmullRomCurve3 实现飞线轨迹
 
 ![quxianxg](/phaseF/quxianxg.jpg)
 
-下面曲线的起始点设置在XOZ平面上，y方向为曲线高度方向。
+下面曲线的起始点设置在 XOZ 平面上，y 方向为曲线高度方向。
 
 ```js
 // p1、p3轨迹线起始点坐标
@@ -33,9 +33,9 @@ const arr = [p1, p2, p3];
 const curve = new THREE.CatmullRomCurve3(arr);
 ```
 
-## 三维二次贝赛尔曲线QuadraticBezierCurve3实现飞线轨迹
+## 三维二次贝赛尔曲线 QuadraticBezierCurve3 实现飞线轨迹
 
-下面曲线的起始点设置在XOZ平面上，y方向为曲线高度方向。
+下面曲线的起始点设置在 XOZ 平面上，y 方向为曲线高度方向。
 
 ```js
 // p1、p3轨迹线起始点坐标

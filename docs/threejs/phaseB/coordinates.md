@@ -14,7 +14,7 @@ outline: deep
 
 ```js
 // mesh 的世界坐标就是mesh.position与group.position的累加
-const mesh = new THREE.Mesh(geometry, material); 
+const mesh = new THREE.Mesh(geometry, material);
 mesh.position.set(50, 0, 0);
 const group = new THREE.Group();
 group.add(mesh);
@@ -30,8 +30,8 @@ group.position.set(50, 0, 0);
 const worldPosition = new THREE.Vector3();
 // 获取 mesh 的世界坐标，你会发现 mesh 的世界坐标受到父对象 group 的 .position 影响
 mesh.getWorldPosition(worldPosition);
-console.log('本地坐标', mesh.position);
-console.log('世界坐标', worldPosition);
+console.log("本地坐标", mesh.position);
+console.log("世界坐标", worldPosition);
 ```
 
 ## 给子对象添加一个局部坐标系
@@ -55,7 +55,7 @@ const geometry = new THREE.BoxGeometry(50, 50, 50);
 
 ```js
 // 平移几何体的顶点坐标，改变几何体自身相对局部坐标原点的位置
-geometry.translate(50/2, 0, 0);
+geometry.translate(50 / 2, 0, 0);
 ```
 
 ## 旋转测试
@@ -65,15 +65,15 @@ geometry.translate(50/2, 0, 0);
 ```js
 // .rotateY()默认绕几何体中心旋转，经过上面几何体平移变化，
 // 你会发现.rotateY()是绕长方体面上一条线旋转
-mesh.rotateY(Math.PI/3);
+mesh.rotateY(Math.PI / 3);
 ```
 
 你可以设置旋转动画，观察几何体平移前后旋转动画差异。
 
 ```js
 function render() {
-    model.rotateY(0.01); // 旋转动画
-    requestAnimationFrame(render);
+  model.rotateY(0.01); // 旋转动画
+  requestAnimationFrame(render);
 }
 render();
 ```

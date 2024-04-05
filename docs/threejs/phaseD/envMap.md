@@ -4,9 +4,9 @@ outline: deep
 
 # 环境贴图.envMap(金属效果)
 
-`环境贴图`对`PBR`材质渲染效果影响还是比较大，一般渲染PBR材质的模型，最好设置一个合适的环境贴图。
+`环境贴图`对`PBR`材质渲染效果影响还是比较大，一般渲染 PBR 材质的模型，最好设置一个合适的环境贴图。
 
-## 立方体纹理加载器CubeTextureLoader
+## 立方体纹理加载器 CubeTextureLoader
 
 - `TextureLoader`返回`Texture`
 - `CubeTextureLoader`返回`CubeTexture`
@@ -17,39 +17,39 @@ outline: deep
 
 立方体纹理对象`CubeTexture`的父类是纹理对象`Texture`。
 
-## CubeTextureLoader加载环境贴图
+## CubeTextureLoader 加载环境贴图
 
-所谓`环境贴图`，就是一个模型周围的环境的图像，比如一间房子，房子的上下左右前后分别拍摄一张照片，就是3D空间中6个角度方向的照片。
+所谓`环境贴图`，就是一个模型周围的环境的图像，比如一间房子，房子的上下左右前后分别拍摄一张照片，就是 3D 空间中 6 个角度方向的照片。
 
 ```js
 // 'px.jpg', 'nx.jpg'：x轴正方向、负方向贴图  p:正positive  n:负negative
 // 'py.jpg', 'ny.jpg'：y轴贴图
 // 'pz.jpg', 'nz.jpg'：z轴贴图
 const textureCube = new THREE.CubeTextureLoader()
-    .setPath('./环境贴图/环境贴图0/')
-    .load(['px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg']);
+  .setPath("./环境贴图/环境贴图0/")
+  .load(["px.jpg", "nx.jpg", "py.jpg", "ny.jpg", "pz.jpg", "nz.jpg"]);
 ```
 
-## MeshStandardMaterial环境贴图属性.envMap
+## MeshStandardMaterial 环境贴图属性.envMap
 
-实际生活中，一个物体表面，往往会反射周围的环境。人的眼睛看到的东西，往往反射有周围景物，所以three.js渲染模型，如果想渲染效果更好看，如果想更符合实际生活情况，也需要想办法让模型反射周围景物。
+实际生活中，一个物体表面，往往会反射周围的环境。人的眼睛看到的东西，往往反射有周围景物，所以 three.js 渲染模型，如果想渲染效果更好看，如果想更符合实际生活情况，也需要想办法让模型反射周围景物。
 
 `MeshStandardMaterial`材质的环境贴图属性是`.envMap`，通过`PBR`材质的`贴图属性`可以实现模型表面`反射周围景物`，这样渲染效果更好。
 
 ```js
 // 加载环境贴图
 const textureCube = new THREE.CubeTextureLoader()
-    .setPath('./环境贴图/环境贴图0/')
-    .load(['px.jpg', 'nx.jpg', 'py.jpg', 'ny.jpg', 'pz.jpg', 'nz.jpg']);
+  .setPath("./环境贴图/环境贴图0/")
+  .load(["px.jpg", "nx.jpg", "py.jpg", "ny.jpg", "pz.jpg", "nz.jpg"]);
 obj.material = new THREE.MeshStandardMaterial({
-    metalness: 1.0,
-    roughness: 0.5,
-    envMap: textureCube, //设置pbr材质环境贴图
-})    
+  metalness: 1.0,
+  roughness: 0.5,
+  envMap: textureCube, //设置pbr材质环境贴图
+});
 ```
 
 ```js
-obj.material.envMap = textureCube; //设置环境贴图 
+obj.material.envMap = textureCube; //设置环境贴图
 ```
 
 ## 环境贴图反射率.envMapIntensity
@@ -61,9 +61,9 @@ obj.material.envMap = textureCube; //设置环境贴图
 obj.material.envMapIntensity = 1.0;
 ```
 
-## 粗糙度roughness为0
+## 粗糙度 roughness 为 0
 
-你可以尝试把粗糙度`roughness`设置为0，看看模型对环境贴图的反射效果。
+你可以尝试把粗糙度`roughness`设置为 0，看看模型对环境贴图的反射效果。
 
 ```js
 obj.material.roughness = 0.0; // 完全镜面反射，像镜子一样
@@ -79,22 +79,23 @@ obj.material.roughness = 0.0; // 完全镜面反射，像镜子一样
 
 ```js
 // 如果renderer.outputEncoding=THREE.sRGBEncoding;环境贴图需要保持一致
-textureCube.encoding = THREE.sRGBEncoding;   
+textureCube.encoding = THREE.sRGBEncoding;
 ``` -->
 
 ## 场景环境属性.environment
 
-网格模型可以通过材质的`.envMap`属性设置环境贴图，如果一个`gltf`模型中`所有的Mesh`都要设置环境贴图就需要`递归遍历`gltf模型，给里面每个Mesh的材质设置`.envMap`。
+网格模型可以通过材质的`.envMap`属性设置环境贴图，如果一个`gltf`模型中`所有的Mesh`都要设置环境贴图就需要`递归遍历`gltf 模型，给里面每个 Mesh 的材质设置`.envMap`。
 
 ```js
 loader.load("../工厂.glb", function (gltf) {
-    // 递归遍历批量设置环境贴图
-    gltf.scene.traverse(function (obj) {
-        if (obj.isMesh) { //判断是否是网格模型
-            obj.material.envMap = textureCube; //设置环境贴图
-        }
-    });
-})
+  // 递归遍历批量设置环境贴图
+  gltf.scene.traverse(function (obj) {
+    if (obj.isMesh) {
+      //判断是否是网格模型
+      obj.material.envMap = textureCube; //设置环境贴图
+    }
+  });
+});
 ```
 
 如果你希望环境贴图影响场景中`scene`所有`Mesh`，可以通过`Scene`的场景环境属性`.environment`实现，把环境贴图对应纹理对象设置为`.environment`的属性值即可。

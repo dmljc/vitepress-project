@@ -7,7 +7,7 @@ outline: deep
 ![常用的组件](/phaseA/guiComp.jpg)
 
 ## 拖动条
-·
+
 .add() 方法参数 3 和 4 数据类型是`数字`。
 
 `格式：add(控制对象，对象具体属性，其他参数)`
@@ -27,31 +27,37 @@ gu·.add(obj, 'x', 0, 180).onChange(function (value) {
 
 ```js
 const obj = {
-    translate: 0,
+  translate: 0,
 };
 
-gui.add(obj, 'translate', [-100, 0, 100]).name('沿Y轴移动').onChange(function (value) {
+gui
+  .add(obj, "translate", [-100, 0, 100])
+  .name("沿Y轴移动")
+  .onChange(function (value) {
     mesh.position.y = value;
-});
+  });
 ```
 
 .add() 方法参数 3 是一个`对象`
 
 ```js
 const obj = {
-    translate: 0,
+  translate: 0,
 };
 // 参数3数据类型：对象(下拉菜单)
-gui.add(obj, 'translate', {
+gui
+  .add(obj, "translate", {
     // left: -100,
     // center: 0,
     // right: 100
     左: -100,
     中: 0,
-    右: 100
-}).name('沿X轴移动').onChange(function (value) {
+    右: 100,
+  })
+  .name("沿X轴移动")
+  .onChange(function (value) {
     mesh.position.x = value;
-});
+  });
 ```
 
 ## Radio 单选框
@@ -60,12 +66,15 @@ gui.add(obj, 'translate', {
 
 ```js
 const obj = {
-    bool: false,
+  bool: false,
 };
 
-gui.add(obj, 'bool').name('是否沿Y轴旋转60度').onChange(function (value) {
+gui
+  .add(obj, "bool")
+  .name("是否沿Y轴旋转60度")
+  .onChange(function (value) {
     mesh.rotateY(value ? 60 : -60);
-});
+  });
 ```
 
 ## 颜色选择器
@@ -74,10 +83,10 @@ addColor() 生成颜色值改变的`交互界面`。
 
 ```js
 const obj = {
-    color: 0x00ffff,
+  color: 0x00ffff,
 };
 
-gui.addColor(obj, 'color').onChange(function(value){
-    mesh.material.color.set(value);
+gui.addColor(obj, "color").onChange(function (value) {
+  mesh.material.color.set(value);
 });
 ```

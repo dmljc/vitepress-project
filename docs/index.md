@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Threejs随手记"
   text: "文档"
-#   tagline: 此站点为本人用来记录学习的笔记本
+  #   tagline: 此站点为本人用来记录学习的笔记本
   image:
     src: /logo.png
     alt: zhangfangchao

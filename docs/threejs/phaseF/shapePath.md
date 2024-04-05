@@ -4,15 +4,15 @@ outline: deep
 
 # 多边形轮廓 Shape 简介
 
-上节课提到多边形轮廓`Shape`，是直接通过一组二维向量`Vector2`表示的xy点坐标创建。下面给大家讲解通过`Shape`的一些2D绘图API表达多边形轮廓。
+上节课提到多边形轮廓`Shape`，是直接通过一组二维向量`Vector2`表示的 xy 点坐标创建。下面给大家讲解通过`Shape`的一些 2D 绘图 API 表达多边形轮廓。
 
 ```js
 // 按照特定顺序，依次书写多边形顶点坐标
 const pointArr = [
-    new THREE.Vector2(-50, -50), // 多边形起点
-    new THREE.Vector2(-50, 50),
-    new THREE.Vector2(50, 50),
-    new THREE.Vector2(50, -50),
+  new THREE.Vector2(-50, -50), // 多边形起点
+  new THREE.Vector2(-50, 50),
+  new THREE.Vector2(50, 50),
+  new THREE.Vector2(50, -50),
 ];
 
 // Shape表示一个平面多边形轮廓
@@ -23,7 +23,7 @@ const shape = new THREE.Shape(pointArr);
 
 `Shape`的父类是`Path`，`Path`提供了`直线`、`圆弧`、`贝塞尔`、`样条`等绘制方法，`Shape`也会从父类是`Path`继承这些图形绘制方法。
 
-如何使用`Path`的直线、圆弧等绘制方法，可以参考原来学习过的各种曲线API和Path的文档。
+如何使用`Path`的直线、圆弧等绘制方法，可以参考原来学习过的各种曲线 API 和 Path 的文档。
 
 ![shapePath](/phaseF/shapePath.svg)
 
@@ -35,7 +35,7 @@ const shape = new THREE.Shape(pointArr);
 ```js
 const shape = new THREE.Shape();
 const path = new THREE.Path();
-console.log('shape==path=', shape, path);
+console.log("shape==path=", shape, path);
 ```
 
 控制台打印 `console.log('shape==path=', shape, path)` 结果如下：
@@ -49,7 +49,7 @@ console.log('shape==path=', shape, path);
 ```js
 const shape = new THREE.Shape();
 shape.moveTo(10, 0);
-console.log('currentPoint', shape.currentPoint); // (10, 0)
+console.log("currentPoint", shape.currentPoint); // (10, 0)
 ```
 
 除了`.moveTo()`方法，`Path`其他的直线、圆弧等方法也可能会改变`.currentPoint`属性。
@@ -70,8 +70,8 @@ shape.lineTo(100, 0);
 ## `.lineTo()`方法和`.moveTo()`方法一样会改变`.currentPoint`属性
 
 ```js
-shape.lineTo(100, 0); 
-console.log('currentPoint', shape.currentPoint); // (100, 0)
+shape.lineTo(100, 0);
+console.log("currentPoint", shape.currentPoint); // (100, 0)
 ```
 
 ## 绘制一个矩形轮廓 Shape
@@ -97,8 +97,8 @@ const geometry = new THREE.ShapeGeometry(shape);
 
 // ExtrudeGeometry 拉伸 Shape 获得一个长方体几何体
 const geometry = new THREE.ExtrudeGeometry(shape, {
-    depth: 20, // 拉伸长度
-    bevelEnabled: false, // 禁止倒角
+  depth: 20, // 拉伸长度
+  bevelEnabled: false, // 禁止倒角
 });
 ```
 
@@ -108,12 +108,14 @@ const geometry = new THREE.ExtrudeGeometry(shape, {
 
 ## 示例代码如下：
 
-::: code-group 
+::: code-group
+
 ```vue [index.vue]
 代码同 生成圆弧顶点 章节
 ```
+
 ```js [model.js]
-import * as THREE from 'three';
+import * as THREE from "three";
 
 const shape = new THREE.Shape();
 
@@ -127,14 +129,15 @@ shape.lineTo(10, 100);
 
 // ExtrudeGeometry 拉伸 Shape 获得一个长方体几何体
 const geometry = new THREE.ExtrudeGeometry(shape, {
-    depth: 40, // 拉伸长度
+  depth: 40, // 拉伸长度
 });
 const materal = new THREE.MeshLambertMaterial({
-    color: 0x00ffff
+  color: 0x00ffff,
 });
 
 const mesh = new THREE.Mesh(geometry, materal);
 
 export default mesh;
 ```
+
 :::

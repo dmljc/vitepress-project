@@ -2,23 +2,23 @@
 outline: deep
 ---
 
-# 三维向量 Vector3 
+# 三维向量 Vector3
 
-三维向量表示一个有顺序的、三个为一组的数字组合（标记为x、y和z），可被用来表示很多事物，例如：
+三维向量表示一个有顺序的、三个为一组的数字组合（标记为 x、y 和 z），可被用来表示很多事物，例如：
 
 - `一个位于三维空间中的点`；
-- `一个在三维空间中的方向与长度的定义`。在three.js中，长度总是从(0, 0, 0)到(x, y, z)的 Euclidean distance（欧几里德距离，即直线距离），方向也是从(0, 0, 0)到(x, y, z)的方向；
+- `一个在三维空间中的方向与长度的定义`。在 three.js 中，长度总是从(0, 0, 0)到(x, y, z)的 Euclidean distance（欧几里德距离，即直线距离），方向也是从(0, 0, 0)到(x, y, z)的方向；
 - `任意的、有顺序的、三个为一组的数字组合`。
 
 ## 实例化一个三维向量对象
 
 ```js
-const v3 = new THREE.Vector3(0,0,0);
+const v3 = new THREE.Vector3(0, 0, 0);
 // 获取三维向量的值
-console.log('v3', v3); // { x:0, y:0, z:0 }
+console.log("v3", v3); // { x:0, y:0, z:0 }
 // 设置三维向量的值
-v3.x = 100;  // 访问x、y或z属性改变某个分量的值
-v3.set(10,0,0); // set方法设置向量的值
+v3.x = 100; // 访问x、y或z属性改变某个分量的值
+v3.set(10, 0, 0); // set方法设置向量的值
 ```
 
 ## 位置属性 .position
@@ -27,7 +27,7 @@ v3.set(10,0,0); // set方法设置向量的值
 
 ```js
 // 位置属性 .position 使用 threejs 三维向量对象 Vector3 表示。
-console.log('模型位置属性.position的值', mesh.position);
+console.log("模型位置属性.position的值", mesh.position);
 ```
 
 ## 改变位置属性
@@ -43,7 +43,7 @@ mesh.position.y = 80;
 设置模型 xyz 坐标
 
 ```js
-mesh.position.set(80,2,10);     
+mesh.position.set(80, 2, 10);
 ```
 
 ## 平移
@@ -85,12 +85,11 @@ x 轴方向放大 2 倍
 mesh.scale.x = 2.0;
 ```
 
-网格模型 xyz 方向分别缩放 0.5，1.5，2 倍    
+网格模型 xyz 方向分别缩放 0.5，1.5，2 倍
 
 ```js
 mesh.scale.set(0.5, 1.5, 2);
 ```
-
 
 ## .normalize ()
 

@@ -2,11 +2,11 @@
 outline: deep
 ---
 
-# 矩形Mesh+背景透明png贴图
+# 矩形 Mesh+背景透明 png 贴图
 
-项目开发中，把一个背景`透明的.png`图像作为平面矩形网格模型`Mesh`的`颜色贴图`是一个非常有用的功能，通过这样一个功能，可以对three.js三维场景进行`标注`。
+项目开发中，把一个背景`透明的.png`图像作为平面矩形网格模型`Mesh`的`颜色贴图`是一个非常有用的功能，通过这样一个功能，可以对 three.js 三维场景进行`标注`。
 
-整体思路：创建一个矩形平面，设置颜色贴图`.map`，注意选择背景透明的.png图像作为颜色贴图，同时材质设置    `transparent: true`，这样png图片背景完全`透明的部分不显示`。
+整体思路：创建一个矩形平面，设置颜色贴图`.map`，注意选择背景透明的.png 图像作为颜色贴图，同时材质设置 `transparent: true`，这样 png 图片背景完全`透明的部分不显示`。
 
 ## 网格地面辅助观察 GridHelper
 
@@ -18,13 +18,13 @@ scene.add(gridHelper);
 
 ## 旋转平移矩形平面
 
-`PlaneGeometry`矩形平面默认是在XOY平面上，如果你想平行于XOZ平面，就需要手动旋转。
+`PlaneGeometry`矩形平面默认是在 XOY 平面上，如果你想平行于 XOZ 平面，就需要手动旋转。
 
 ```js
-mesh.rotateX(-Math.PI/2); 
+mesh.rotateX(-Math.PI / 2);
 ```
 
-如果你不想矩形平面Mesh与地面网格线重合，可以通过位置属性`.position`偏移。
+如果你不想矩形平面 Mesh 与地面网格线重合，可以通过位置属性`.position`偏移。
 
 ```js
 // 适当偏移，不与地面重合
@@ -34,16 +34,16 @@ mesh.position.y = 1;
 完整代码如下：
 
 ```js
-const geometry = new THREE.PlaneGeometry(60,60);
+const geometry = new THREE.PlaneGeometry(60, 60);
 const texLoader = new THREE.TextureLoader();
-const texture = texLoader.load('./指南针.png');
+const texture = texLoader.load("./指南针.png");
 const material = new THREE.MeshLambertMaterial({
-    map: texture,
-    transparent: true
+  map: texture,
+  transparent: true,
 });
 const mesh = new THREE.Mesh(geometry, material);
 
-mesh.rotateX(-Math.PI/2);
+mesh.rotateX(-Math.PI / 2);
 
 mesh.position.y = 10;
 ```

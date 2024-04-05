@@ -2,35 +2,36 @@
 outline: deep
 ---
 
-# 曲线Curve简介
+# 曲线 Curve 简介
 
-上节课程绘制一个圆弧线是自己通过算法实现，其实threejs提供了很多常用的曲线或直线API，可以直接使用。这些API曲线都有一个共同的父类`Curve`。
+上节课程绘制一个圆弧线是自己通过算法实现，其实 threejs 提供了很多常用的曲线或直线 API，可以直接使用。这些 API 曲线都有一个共同的父类`Curve`。
 
 ![Curve](/phaseF/Curve.svg)
 
-::: info 缓冲类型几何体BufferGeometry:
-threejs的长方体`BoxGeometry`、球体`SphereGeometry`等几何体都是基于`BufferGeometry`类构建的，`BufferGeometry`是一个`没有任何形状的空几何体`，你可以通过`BufferGeometry`自定义任何几何形状，具体一点说就是`定义顶点数据`。
+::: info 缓冲类型几何体 BufferGeometry:
+threejs 的长方体`BoxGeometry`、球体`SphereGeometry`等几何体都是基于`BufferGeometry`类构建的，`BufferGeometry`是一个`没有任何形状的空几何体`，你可以通过`BufferGeometry`自定义任何几何形状，具体一点说就是`定义顶点数据`。
 :::
 
-## 椭圆EllipseCurve例子
+## 椭圆 EllipseCurve 例子
 
-曲线API的使用，具体语法可以查询文档，下面以椭圆为例，给大家绘制一个`椭圆曲线效果`。
+曲线 API 的使用，具体语法可以查询文档，下面以椭圆为例，给大家绘制一个`椭圆曲线效果`。
 
 ```js
 // 参数1和2表示椭圆中心坐标 参数3和4表示x和y方向半径
 const arc = new THREE.EllipseCurve(0, 0, 100, 50);
 ```
 
-## 曲线Curve方法.getPoints()
+## 曲线 Curve 方法.getPoints()
 
 椭圆弧线`EllipseCurve`的父类是曲线`Curve`,自然会继承父类曲线`.getPoints()`方法，通过`.getPoints()`可以从曲线上获取`顶点数据`。
 
-通过方法`.getPoints()`可以从曲线上按照一定的细分精度返回沿着曲线分布的顶点坐标。细分数越高返回的顶点数量越多，自然轮廓越接近于曲线形状。方法`.getPoints()`的返回值是一个由二维向量Vector2或三维向量Vector3构成的数组，Vector2表示位于同一平面内的点，Vector3表示三维空间中一点。
+通过方法`.getPoints()`可以从曲线上按照一定的细分精度返回沿着曲线分布的顶点坐标。细分数越高返回的顶点数量越多，自然轮廓越接近于曲线形状。方法`.getPoints()`的返回值是一个由二维向量 Vector2 或三维向量 Vector3 构成的数组，Vector2 表示位于同一平面内的点，Vector3 表示三维空间中一点。
 
 ```js
 // 分段数50，返回51个顶点
 const pointsArr = arc.getPoints(50);
 ```
+
 ## .setFromPoints()提取曲线坐标数据
 
 把数组`pointsArr`里面的坐标数据提取出来，赋值给`geometry.attributes.position`属性。
@@ -45,14 +46,14 @@ geometry.setFromPoints(pointsArr);
 ```js
 // 点材质
 const material = new THREE.PointsMaterial({
-    color: 0xffff00,
-    size: 1 //点对象像素尺寸
-}); 
+  color: 0xffff00,
+  size: 1, //点对象像素尺寸
+});
 // 点模型
 const points = new THREE.Points(geometry, material);
 ```
 
-## 曲线Curve方法.getSpacedPoints()
+## 曲线 Curve 方法.getSpacedPoints()
 
 通过`.getSpacedPoints()`和`.getPoints()`一样也可以从曲线`Curve`上返回一系列曲线上的`顶点坐标`。
 通过`.getSpacedPoints()`是按照曲线长度等`间距返回顶点数据`，`.getPoints()`获取点的方式并不是按照曲线等间距的方式，而是`会考虑曲线斜率变化`，`斜率变化快的位置返回的顶点更密集`。
@@ -69,7 +70,7 @@ geometry.getSpacedPoints(pointsArr);
 ```js
 // 线材质
 const material = new THREE.LineBasicMaterial({
-    color: 0x00fffff,
+  color: 0x00fffff,
 });
 // 线模型
 const line = new THREE.Line(geometry, material);
@@ -78,12 +79,13 @@ const line = new THREE.Line(geometry, material);
 ## 示例代码如下：
 
 ::: code-group
+
 ```vue [index.vue]
 代码同 生成圆弧顶点 章节
 ```
 
 ```js [model.js]
-import * as THREE from 'three';
+import * as THREE from "three";
 
 // 绘制椭圆弧线
 const arc = new THREE.EllipseCurve(0, 0, 100, 50, 0, Math.PI, false);
@@ -99,8 +101,8 @@ geometry.setFromPoints(pointsArr);
 
 // 创建线材质
 const material = new THREE.LineBasicMaterial({
-    color: 0x00ffff,
-    side: 2
+  color: 0x00ffff,
+  side: 2,
 });
 
 // 创建线模型
@@ -108,5 +110,5 @@ const model = new THREE.Line(geometry, material);
 
 export default model;
 ```
-:::
 
+:::

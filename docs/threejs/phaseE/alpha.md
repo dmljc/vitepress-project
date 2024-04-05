@@ -2,18 +2,18 @@
 outline: deep
 ---
 
-# Three.js背景透明度
+# Three.js 背景透明度
 
-通过Three.js渲染一个模型的时候，不希望canvas画布有背景颜色，也就是canvas画布完全透明，可以透过canvas画布看到画布后面叠加的HTML元素图文，呈现出来一种三维模型悬浮在网页上面的效果。
+通过 Three.js 渲染一个模型的时候，不希望 canvas 画布有背景颜色，也就是 canvas 画布完全透明，可以透过 canvas 画布看到画布后面叠加的 HTML 元素图文，呈现出来一种三维模型悬浮在网页上面的效果。
 
 ![alpha](/phaseE/alpha.jpg)
 
-## canvas画布插入到web页面上
+## canvas 画布插入到 web 页面上
 
 ```js
-<div id="webgl"></div>
+<div id="webgl"></div>;
 
-document.getElementById('webgl').appendChild(renderer.domElement);
+document.getElementById("webgl").appendChild(renderer.domElement);
 ```
 
 ## .setClearAlpha()方法
@@ -30,14 +30,14 @@ renderer.setClearAlpha(0.8);
 renderer.setClearAlpha(0.0);
 ```
 
-## 背景透明alpha: true
+## 背景透明 alpha: true
 
-通过Three.js渲染器`WebGLRenderer`的`alpha`属性值设置为`true`就可以，`WebGL渲染器`的`alpha`属性默认值是`false`。
+通过 Three.js 渲染器`WebGLRenderer`的`alpha`属性值设置为`true`就可以，`WebGL渲染器`的`alpha`属性默认值是`false`。
 
 ```js
 // 在构造函数参数中设置alpha属性的值
 var renderer = new THREE.WebGLRenderer({
-  alpha: true
+  alpha: true,
 });
 ```
 

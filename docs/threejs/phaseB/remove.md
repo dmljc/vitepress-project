@@ -45,7 +45,7 @@ group.remove(mesh1, mesh2);
 ```js
 mesh.visible = false; // 隐藏一个网格模型，visible 的默认值是 true
 group.visible = false; // 隐藏一个包含多个模型的组对象 group
-mesh.visible = true;  // 使网格模型 mesh 处于显示状态
+mesh.visible = true; // 使网格模型 mesh 处于显示状态
 ```
 
 ## 材质属性 .visible
@@ -59,6 +59,5 @@ mesh.material.visible = false;
 ```
 
 :::warning 注意:
-如果多个模型引用了同一个材质，如果该材质.visible设置为false，意味着隐藏绑定该材质的所有模型。
+如果多个模型引用了同一个材质，如果该材质.visible 设置为 false，意味着隐藏绑定该材质的所有模型。
 :::
-

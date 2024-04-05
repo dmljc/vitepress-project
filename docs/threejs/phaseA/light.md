@@ -4,20 +4,21 @@ outline: deep
 
 # 光源对物体表面影响
 
-实际生活中物体表面的明暗效果是会受到光照的影响，比如晚上不开灯，你就看不到物体，灯光比较暗，物体也比较暗。在threejs中，咱们用网格模型Mesh模拟生活中物体，所以threejs中模拟光照Light对物体表面的影响，就是模拟光照Light对网格模型Mesh表面的影响。
+实际生活中物体表面的明暗效果是会受到光照的影响，比如晚上不开灯，你就看不到物体，灯光比较暗，物体也比较暗。在 threejs 中，咱们用网格模型 Mesh 模拟生活中物体，所以 threejs 中模拟光照 Light 对物体表面的影响，就是模拟光照 Light 对网格模型 Mesh 表面的影响。
 
 ## 受光照影响材质
 
-threejs提供的网格材质，有的受光照影响，有的不受光照影响。
+threejs 提供的网格材质，有的受光照影响，有的不受光照影响。
 
 ![material](/phaseA/material.svg)
 
-一个立方体长方体使用MeshLambertMaterial材质，不同面和光线夹角不同，立方体不同面就会呈现出来不同的明暗效果。
+一个立方体长方体使用 MeshLambertMaterial 材质，不同面和光线夹角不同，立方体不同面就会呈现出来不同的明暗效果。
 
 ```js
 // 漫反射 受光照影响
-const material = new THREE.MeshLambertMaterial(); 
+const material = new THREE.MeshLambertMaterial();
 ```
+
 ## 光源简介
 
 ![光源简介](/phaseA/lightIntroduce.svg)
@@ -44,9 +45,10 @@ directionalLight.position.set(80, 100, 50);
 directionalLight.target = mesh;
 scene.add(directionalLight);
 ```
+
 ### 平行光辅助观察 DirectionalLightHelper
 
-通过点光源辅助观察对象DirectionalLightHelper可视化点光源。
+通过点光源辅助观察对象 DirectionalLightHelper 可视化点光源。
 
 ![平行光辅助观察对象](/phaseA/directionalLightHelper.jpg)
 
@@ -54,14 +56,19 @@ scene.add(directionalLight);
 // light-- 被模拟的光源.
 // size -- (可选的) 平面的尺寸. 默认为 1.
 // color -- (可选的) 如果没有设置颜色将使用光源的颜色.
-const dirLightHelper = new THREE.DirectionalLightHelper(directionalLight, 5, 0xffff00);
+const dirLightHelper = new THREE.DirectionalLightHelper(
+  directionalLight,
+  5,
+  0xffff00
+);
 scene.add(dirLightHelper);
 ```
+
 ## 点光源
 
 ![点光源](/phaseA/lightType.png)
 
-点光源PointLight可以类比为一个发光点，就像生活中一个灯泡以灯泡为中心向四周发射光线。
+点光源 PointLight 可以类比为一个发光点，就像生活中一个灯泡以灯泡为中心向四周发射光线。
 
 ```js
 // 参数1：0xffffff是纯白光，表示光源颜色
@@ -69,23 +76,25 @@ scene.add(dirLightHelper);
 const pointLight = new THREE.PointLight(0xffffff, 1.0);
 ```
 
-除了通过THREE.PointLight的参数2设置光照强度，你可以可以直接访问光照强度属性.intensity设置。
+除了通过 THREE.PointLight 的参数 2 设置光照强度，你可以可以直接访问光照强度属性.intensity 设置。
 
 ```js
 // 光照强度
 pointLight.intensity = 1.0;
 ```
+
 ### 光源衰减
 
-实际生活中点光源，比如比如一个灯泡，随机距离的改变，光线会衰减，越来越弱，光源衰减属性.decay默认值是2.0，如果你不希望衰减可以设置为0.0。
+实际生活中点光源，比如比如一个灯泡，随机距离的改变，光线会衰减，越来越弱，光源衰减属性.decay 默认值是 2.0，如果你不希望衰减可以设置为 0.0。
 
 ```js
 // 设置光源不随距离衰减
 pointLight.decay = 0.0;
 ```
+
 ### 光源位置
 
-你把点光源想象为一个电灯泡，你在3D空间中，放的位置不同，模型的渲染效果就不一样。
+你把点光源想象为一个电灯泡，你在 3D 空间中，放的位置不同，模型的渲染效果就不一样。
 
 注意光源位置尺寸大小：如果你希望光源照在模型的外表面，那你就需要把光源放在模型的外面。
 
@@ -96,20 +105,22 @@ pointLight.position.set(400, 0, 0);
 
 ### 光源添加到场景
 
-光源和网格模型Mesh对应一样是三维场景的一部分，自然需要添加到三维场景中才能起作用。
+光源和网格模型 Mesh 对应一样是三维场景的一部分，自然需要添加到三维场景中才能起作用。
 
 ```js
 // 点光源添加到场景中
-scene.add(pointLight); 
+scene.add(pointLight);
 ```
+
 ### 改变光源位置，观察网格模型表面的明暗变化。
 
 ```js
-pointLight.position.set(400, 200, 300); 
+pointLight.position.set(400, 200, 300);
 ```
+
 ### 点光源辅助观察 PointLightHelper
 
-通过点光源辅助观察对象PointLightHelper可视化点光源。
+通过点光源辅助观察对象 PointLightHelper 可视化点光源。
 
 ```js
 // 光源辅助观察

@@ -4,11 +4,11 @@ outline: deep
 
 # 几何体顶点颜色数数据
 
-章节2中介绍过顶点位置、顶点法向量数据，下面给大家介绍顶点颜色`.attributes.color`数据。
+章节 2 中介绍过顶点位置、顶点法向量数据，下面给大家介绍顶点颜色`.attributes.color`数据。
 
 - 顶点位置数据`geometry.attributes.position`
 - 顶点法向量数据`geometry.attributes.normal`
-- 顶点UV数据`geometry.attributes.uv`
+- 顶点 UV 数据`geometry.attributes.uv`
 - 顶点颜色数据`geometry.attributes.color`
 
 ## 几何体顶点颜色 .attributes.position
@@ -17,7 +17,7 @@ outline: deep
 
 ```js
 // 创建一个几何体对象
-const geometry = new THREE.BufferGeometry(); 
+const geometry = new THREE.BufferGeometry();
 // 类型数组创建顶点数据
 const vertices = new Float32Array([
     0, 0, 0, // 顶点1坐标
@@ -55,8 +55,8 @@ geometry.attributes.color = color;
 ```js
 // 点渲染模式
 const material = new THREE.PointsMaterial({
-    // color: 0x00fff, // 使用顶点颜色数据，color属性可以不用设置
-    vertexColors: true,// 默认false，设置为true表示使用顶点颜色渲染
+  // color: 0x00fff, // 使用顶点颜色数据，color属性可以不用设置
+  vertexColors: true, // 默认false，设置为true表示使用顶点颜色渲染
 });
 // 点模型对象
 const mesh = new THREE.Points(geometry, material);
@@ -88,7 +88,7 @@ geometry.attributes.color = color;
 
 // 点渲染模式
 const material = new THREE.PointsMaterial({
-    vertexColors: true,// 默认false，设置为true表示使用顶点颜色渲染
+  vertexColors: true, // 默认false，设置为true表示使用顶点颜色渲染
 });
 
 const mesh = new THREE.Line(geometry, material);
@@ -105,7 +105,7 @@ mesh.translateY(10);
 ![meshColor](/phaseF/meshColor.jpg)
 
 ```js
-// 线模型对象 
+// 线模型对象
 const mesh = new THREE.Line(geometry, material); // [!code --]
 // 网格模型对象
 const mesh = new THREE.Mesh(geometry, material); // [!code ++]
@@ -114,15 +114,16 @@ const mesh = new THREE.Mesh(geometry, material); // [!code ++]
 ## 示例代码如下
 
 ::: code-group
+
 ```vue [index.vue]
 代码同 生成圆弧顶点 章节
 ```
 
 ```js [model.js]
-import * as THREE from 'three';
+import * as THREE from "three";
 
 // 创建一个几何体对象
-const geometry = new THREE.BufferGeometry(); 
+const geometry = new THREE.BufferGeometry();
 // 类型数组创建顶点数据
 const vertices = new Float32Array([
     0, 0, 0, // 顶点1坐标
@@ -148,19 +149,19 @@ geometry.attributes.color = color;
 
 // 点渲染模式
 const material = new THREE.PointsMaterial({
-    // color: 0x00fff, // 使用顶点颜色数据，color属性可以不用设置
-    vertexColors: true,// 默认false，设置为true表示使用顶点颜色渲染
-    size: 20.0, // 点对象像素尺寸
+  // color: 0x00fff, // 使用顶点颜色数据，color属性可以不用设置
+  vertexColors: true, // 默认false，设置为true表示使用顶点颜色渲染
+  size: 20.0, // 点对象像素尺寸
 });
 // 点模型对象
 // const points = new THREE.Points(geometry, material);
 // 线模型对象
 // const mesh = new THREE.Line(geometry, material);
 // 网格模型对象
-const mesh = new THREE.Mesh(geometry, material); 
+const mesh = new THREE.Mesh(geometry, material);
 mesh.translateX(10);
 mesh.translateY(10);
 export default mesh;
 ```
-:::
 
+:::

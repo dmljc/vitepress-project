@@ -6,10 +6,9 @@ outline: deep
 
 ## 材质父类 Material
 
-查询threejs文档，你可以看到基础网格材质`MeshBasicMaterial`、漫反射网格材质`MeshLambertMaterial`、高光网格材质`MeshPhongMaterial`等网格材质都有一个共同的父类`Material`。
+查询 threejs 文档，你可以看到基础网格材质`MeshBasicMaterial`、漫反射网格材质`MeshLambertMaterial`、高光网格材质`MeshPhongMaterial`等网格材质都有一个共同的父类`Material`。
 
 ![Material](/phaseB/material.svg)
-
 
 ## 网格材质继承父类属性
 
@@ -21,7 +20,7 @@ outline: deep
 
 ```js
 material.transparent = true; // 开启透明
-material.opacity = 0.5;     // 设置透明度
+material.opacity = 0.5; // 设置透明度
 ```
 
 ## 材质面属性 .side
@@ -32,12 +31,11 @@ material.opacity = 0.5;     // 设置透明度
 
 ```js
 material.side = THREE.BackSide; // 背面可以看到
-material.side = THREE.DoubleSide;// 双面可见
+material.side = THREE.DoubleSide; // 双面可见
 ```
 
-`THREE.FrontSide` 0、`THREE.BackSide` 1、`THREE.DoubleSide`2 其实在 theeejs 内部都表示一个数字，你可以通过浏览器控制 log 打印查看验证，具体可以查看src目录下 constants.js 的源码文件。
+`THREE.FrontSide` 0、`THREE.BackSide` 1、`THREE.DoubleSide`2 其实在 theeejs 内部都表示一个数字，你可以通过浏览器控制 log 打印查看验证，具体可以查看 src 目录下 constants.js 的源码文件。
 
 ```js
-console.log('material.side', material.side);
+console.log("material.side", material.side);
 ```
-

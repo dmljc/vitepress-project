@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# 多边形Shape(内孔.holes)
+# 多边形 Shape(内孔.holes)
 
 有些多边形`Shape`内部是有孔洞的，这时候就需要借助多边形`Shape`的内孔`.holes`属性和`Path`对象实现。
 
@@ -37,6 +37,7 @@ path3.lineTo(80, 50);
 path3.lineTo(80, 80);
 path3.lineTo(50, 80);
 ```
+
 ### 三个内孔轮廓分别插入到 holes 属性中
 
 ```js
@@ -51,20 +52,22 @@ shape.holes.push(path1, path2, path3);
 
 ```js
 const geometry = new THREE.ExtrudeGeometry(shape, {
-    depth: 60, // 拉伸长度
-    bevelEnabled: false, // 禁止倒角
-    curveSegments: 50 // shape曲线对应曲线细分数，光滑度系数
+  depth: 60, // 拉伸长度
+  bevelEnabled: false, // 禁止倒角
+  curveSegments: 50, // shape曲线对应曲线细分数，光滑度系数
 });
 ```
 
 ## 示例代码如下：
 
 ::: code-group
+
 ```vue [index.vue]
 代码同 生成圆弧顶点 章节
 ```
+
 ```js [model.js]
-import * as THREE from 'three';
+import * as THREE from "three";
 
 // 先创建Shape的矩形外轮廓
 const shape = new THREE.Shape();
@@ -95,15 +98,16 @@ shape.holes.push(path1, path2, path3);
 
 // ExtrudeGeometry 拉伸 Shape 获得一个长方体几何体
 const geometry = new THREE.ExtrudeGeometry(shape, {
-    depth: 60, // 拉伸长度
-    bevelEnabled: false, // 禁止倒角
-    curveSegments: 50 // shape曲线对应曲线细分数，光滑度系数
+  depth: 60, // 拉伸长度
+  bevelEnabled: false, // 禁止倒角
+  curveSegments: 50, // shape曲线对应曲线细分数，光滑度系数
 });
 const material = new THREE.MeshLambertMaterial({
-    color: 0x00ffff
+  color: 0x00ffff,
 });
 const mesh = new THREE.Mesh(geometry, material);
 
 export default mesh;
 ```
+
 :::

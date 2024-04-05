@@ -17,24 +17,26 @@ outline: deep
 格式：
 
 ```js
-.arc (x: Float, y: F, radius: F, startAngle: F, endAngle: F, clockwise: B); 
+.arc (x: Float, y: F, radius: F, startAngle: F, endAngle: F, clockwise: B);
 ```
-|参数|值|
-|:-------|:-------|
-|x, y| 弧线的中心来自上次调用后的偏移量。|
-|radius| 弧线的半径。|
-startAngle |起始角，以弧度来表示。|
-|endAngle| 终止角，以弧度来表示。
-clockwise |以顺时针方向创建（扫过）弧线。默认值为false。|
+
+| 参数       | 值                                             |
+| :--------- | :--------------------------------------------- |
+| x, y       | 弧线的中心来自上次调用后的偏移量。             |
+| radius     | 弧线的半径。                                   |
+| startAngle | 起始角，以弧度来表示。                         |
+| endAngle   | 终止角，以弧度来表示。                         |
+| clockwise  | 以顺时针方向创建（扫过）弧线。默认值为 false。 |
 
 下面代码绘制了一个矩形+扇形的轮廓，圆心在(100, 0) 半径 50。
 ::: code-group
+
 ```vue [index.vue]
 代码同 生成圆弧顶点 章节
 ```
 
 ```js [model.js]
-import * as THREE from 'three';
+import * as THREE from "three";
 
 const shape = new THREE.Shape();
 // 方案1
@@ -51,12 +53,13 @@ shape.lineTo(0, 50);
 const geometry = new THREE.ShapeGeometry(shape);
 
 const materal = new THREE.MeshLambertMaterial({
-    color: 0x00ffff
+  color: 0x00ffff,
 });
 
 const mesh = new THREE.Mesh(geometry, materal);
 export default mesh;
 ```
+
 :::
 
 效果如下图所示：
@@ -65,11 +68,10 @@ export default mesh;
 
 ### Shape 曲线的光滑系数
 
-`Shape`有直线之外的曲线，如果默认渲染不光滑，可以设置参数2提升；作用和`ExtrudeGeometry`的 `curveSegments`参数等效（shape曲线对应曲线细分数）
-
+`Shape`有直线之外的曲线，如果默认渲染不光滑，可以设置参数 2 提升；作用和`ExtrudeGeometry`的 `curveSegments`参数等效（shape 曲线对应曲线细分数）
 
 ```js
-// shape:填充轮廓  
+// shape:填充轮廓
 const geometry = new THREE.ShapeGeometry(shape, 1); // [!code --]
 const geometry = new THREE.ShapeGeometry(shape, 20); // [!code ++]
 ```
@@ -86,22 +88,22 @@ const geometry = new THREE.ShapeGeometry(shape, 20); // [!code ++]
 
 ```js
 const geometry = new THREE.ExtrudeGeometry(shape, {
-    depth: 20, // 拉伸长度
-    bevelEnabled: false, // 禁止倒角
-    curveSegments: 20, // shape曲线对应曲线细分数
+  depth: 20, // 拉伸长度
+  bevelEnabled: false, // 禁止倒角
+  curveSegments: 20, // shape曲线对应曲线细分数
 });
 ```
 
-
 ### arc 示例代码如下：
 
-::: code-group 
+::: code-group
+
 ```vue [index.vue]
 代码同 生成圆弧顶点 章节
 ```
 
 ```js [model.js]
-import * as THREE from 'three';
+import * as THREE from "three";
 
 const shape = new THREE.Shape();
 
@@ -109,44 +111,46 @@ shape.lineTo(100, 0);
 shape.arc(0, 0, 50, 0, Math.PI / 2, false);
 shape.lineTo(0, 50);
 
-// 拉伸 
+// 拉伸
 const geometry = new THREE.ExtrudeGeometry(shape, {
-    depth: 40,
-    curveSegments: 20 // shape曲线对应曲线细分数
+  depth: 40,
+  curveSegments: 20, // shape曲线对应曲线细分数
 });
 
 const materal = new THREE.MeshLambertMaterial({
-    color: 0x00ffff
+  color: 0x00ffff,
 });
 
 const mesh = new THREE.Mesh(geometry, materal);
 export default mesh;
 ```
+
 :::
 
 ## 绝对圆弧方法 .absarc()
 
 `.absarc()`圆心坐标不受到`.currentPoint`影响，以坐标原点作为参考，这一点和圆弧方法`.arc()`不同。
-下面代码绘制了一个矩形+扇形的轮廓，圆心在(100, 0) 半径50。效果同上
+下面代码绘制了一个矩形+扇形的轮廓，圆心在(100, 0) 半径 50。效果同上
 
 ```js
 const shape = new THREE.Shape();
 // .absarc()圆心坐标不受到.currentPoint影响
 shape.lineTo(100, 0); // [!code --]
 shape.lineTo(150, 0); // [!code ++]
-shape.absarc(100, 0, 50, 0, Math.PI/2, false); 
+shape.absarc(100, 0, 50, 0, Math.PI / 2, false);
 shape.lineTo(0, 50);
 ```
 
 ### absarc 示例代码如下：
 
 ::: code-group
+
 ```vue [index.vue]
 代码同 生成圆弧顶点 章节
 ```
 
 ```js [model.js]
-import * as THREE from 'three';
+import * as THREE from "three";
 
 const shape = new THREE.Shape();
 
@@ -161,17 +165,18 @@ shape.lineTo(0, 50);
 
 // 拉伸
 const geometry = new THREE.ExtrudeGeometry(shape, {
-    depth: 40,
-    curveSegments: 20 // shape曲线对应曲线细分数
+  depth: 40,
+  curveSegments: 20, // shape曲线对应曲线细分数
 });
 
 const materal = new THREE.MeshLambertMaterial({
-    color: 0x00ffff
+  color: 0x00ffff,
 });
 
 const mesh = new THREE.Mesh(geometry, materal);
 export default mesh;
 ```
+
 :::
 
 ## arc 和 absarc 区别

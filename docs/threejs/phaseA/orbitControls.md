@@ -16,7 +16,7 @@ outline: deep
 
 ```js
 // 引入轨道控制器扩展库 OrbitControls.js
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 ```
 
 ## 使用 OrbitControls
@@ -27,19 +27,19 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 // 监听鼠标、键盘事件
 // 如果 OrbitControls改变了相机参数，重新调用渲染器渲染三维场景
-controls.addEventListener('change', function () {
-    // 执行渲染操作
-    renderer.render(scene, camera); 
+controls.addEventListener("change", function () {
+  // 执行渲染操作
+  renderer.render(scene, camera);
 });
 ```
 
 ## OrbitControls 本质
 
-OrbitControls 本质上就是改变相机的参数，比如相机的位置属性，改变相机位置也可以改变相机拍照场景中模型的角度，实现模型的360度旋转预览效果，改变透视投影相机距离模型的距离，就可以改变相机能看到的视野范围。
+OrbitControls 本质上就是改变相机的参数，比如相机的位置属性，改变相机位置也可以改变相机拍照场景中模型的角度，实现模型的 360 度旋转预览效果，改变透视投影相机距离模型的距离，就可以改变相机能看到的视野范围。
 
 ```js
-controls.addEventListener('change', function () {
-    // 浏览器控制台查看相机位置变化
-    console.log('camera.position',camera.position);
+controls.addEventListener("change", function () {
+  // 浏览器控制台查看相机位置变化
+  console.log("camera.position", camera.position);
 });
 ```

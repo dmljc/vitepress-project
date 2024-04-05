@@ -8,19 +8,19 @@ outline: deep
 
 ## 克隆.clone()
 
-克隆 `.clone()` 简单说就是`复制一个和原对象一样的新对象`，下面以三维向量对象`Vector3` 给大家举例，其他的threejs 对象都可以参照类似的写法。
+克隆 `.clone()` 简单说就是`复制一个和原对象一样的新对象`，下面以三维向量对象`Vector3` 给大家举例，其他的 threejs 对象都可以参照类似的写法。
 
 ```js
 const v1 = new THREE.Vector3(1, 2, 3);
-console.log('v1',v1);
+console.log("v1", v1);
 // v2是一个新的Vector3对象，和v1的.x、.y、.z属性值一样
 const v2 = v1.clone();
-console.log('v2',v2);
+console.log("v2", v2);
 ```
 
-## 复制 .copy() 
+## 复制 .copy()
 
-复制 `.copy()`简单说就是 `把一个对象属性的属性值赋值给另一个对象`，下面以三维向量对象Vector3给大家举例，其他的threejs对象都可以参照类似的写法。
+复制 `.copy()`简单说就是 `把一个对象属性的属性值赋值给另一个对象`，下面以三维向量对象 Vector3 给大家举例，其他的 threejs 对象都可以参照类似的写法。
 
 ```js
 const v1 = new THREE.Vector3(1, 2, 3);
@@ -59,7 +59,8 @@ mesh2.material.color.set(0xff0000);
 
 ## 练习：mesh.position.copy()
 
-改变 mesh 的位置，使之位于 mesh2 的正上方(y)，距离100。
+改变 mesh 的位置，使之位于 mesh2 的正上方(y)，距离 100。
+
 ```js
 mesh.position.copy(mesh2.position); //1. 第1步位置重合
 mesh.position.y += 100; //1. 第2步mesh在原来y的基础上增加100
@@ -72,11 +73,11 @@ mesh.position.y += 100; //1. 第2步mesh在原来y的基础上增加100
 ```js
 // 渲染循环
 function render() {
-    mesh.rotateY(0.01);// mesh旋转动画
-    // 同步mesh2和mesh的姿态角度一样，不管mesh姿态角度怎么变化，mesh2始终保持同步
-    mesh2.rotation.copy(mesh.rotation);
-    renderer.render(scene, camera);
-    requestAnimationFrame(render);
+  mesh.rotateY(0.01); // mesh旋转动画
+  // 同步mesh2和mesh的姿态角度一样，不管mesh姿态角度怎么变化，mesh2始终保持同步
+  mesh2.rotation.copy(mesh.rotation);
+  renderer.render(scene, camera);
+  requestAnimationFrame(render);
 }
 render();
 ```
