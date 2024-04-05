@@ -133,6 +133,7 @@ export default defineConfig({
                         { text: '地图案例(包围盒、正投影)', link: '/threejs/phaseG/map.md'},
                         { text: '相机动画(.position和.lookAt())', link: '/threejs/phaseG/animation.md'},
                         { text: '不同方向的投影视图', link: '/threejs/phaseG/direction.md'},
+                        { text: '旋转渲染结果(.up相机上方向)', link: '/threejs/phaseG/up.md'},
                     ]
                 }
             ],
