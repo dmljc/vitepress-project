@@ -134,6 +134,7 @@ export default defineConfig({
                         { text: '相机动画(.position和.lookAt())', link: '/threejs/phaseG/animation.md'},
                         { text: '不同方向的投影视图', link: '/threejs/phaseG/direction.md'},
                         { text: '旋转渲染结果(.up相机上方向)', link: '/threejs/phaseG/up.md'},
+                        { text: '管道漫游案例', link: '/threejs/phaseG/tube.md'},
                     ]
                 }
             ],
