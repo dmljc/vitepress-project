@@ -126,17 +126,24 @@ export default defineConfig({
                 },
                 {
                     text: '相机基础',
+                    collapsed: true,
                     items: [
-                        { text: '正投影相机', link: '/threejs/phaseG/orthographicCamera.md'},
-                        { text: '正投影相机-Canvas尺寸变化', link: '/threejs/phaseG/canvas.md'},
-                        { text: '包围盒Box3', link: '/threejs/phaseG/box3.md'},
-                        { text: '地图案例(包围盒、正投影)', link: '/threejs/phaseG/map.md'},
-                        { text: '相机动画(.position和.lookAt())', link: '/threejs/phaseG/animation.md'},
-                        { text: '不同方向的投影视图', link: '/threejs/phaseG/direction.md'},
-                        { text: '旋转渲染结果(.up相机上方向)', link: '/threejs/phaseG/up.md'},
-                        { text: '管道漫游案例', link: '/threejs/phaseG/tube.md'},
-                        { text: 'OrbitControls旋转缩放限制', link: '/threejs/phaseG/orbitControls.md'},
-                        { text: '相机控件 MapControls', link: '/threejs/phaseG/mapControls.md'},
+                        { text: '正投影相机', link: '/threejs/phaseG/orthographicCamera.md' },
+                        { text: '正投影相机-Canvas尺寸变化', link: '/threejs/phaseG/canvas.md' },
+                        { text: '包围盒Box3', link: '/threejs/phaseG/box3.md' },
+                        { text: '地图案例(包围盒、正投影)', link: '/threejs/phaseG/map.md' },
+                        { text: '相机动画(.position和.lookAt())', link: '/threejs/phaseG/animation.md' },
+                        { text: '不同方向的投影视图', link: '/threejs/phaseG/direction.md' },
+                        { text: '旋转渲染结果(.up相机上方向)', link: '/threejs/phaseG/up.md' },
+                        { text: '管道漫游案例', link: '/threejs/phaseG/tube.md' },
+                        { text: 'OrbitControls旋转缩放限制', link: '/threejs/phaseG/orbitControls.md' },
+                        { text: '相机控件 MapControls', link: '/threejs/phaseG/mapControls.md' },
+                    ]
+                },
+                {
+                    text: '光源和阴影',
+                    items: [
+                        { text: '聚光源SpotLight', link: '/threejs/phaseH/spotLight.md' },
                     ]
                 }
             ],
