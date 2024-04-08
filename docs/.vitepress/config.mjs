@@ -144,6 +144,7 @@ export default defineConfig({
                     text: '光源和阴影',
                     items: [
                         { text: '聚光源SpotLight', link: '/threejs/phaseH/spotLight.md' },
+                        { text: '平行光阴影计算', link: '/threejs/phaseH/direcLightShadow.md' },
                     ]
                 }
             ],
