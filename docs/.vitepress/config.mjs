@@ -165,8 +165,32 @@ export default defineConfig({
         outlineTitle: "页面导航",
         // 站点页脚配置
         footer: {
-            message: "Released under the MIT License",
-            copyright: `Copyright © 2024-present Zhang Fang Chao <a href="https://beian.miit.gov.cn">浙ICP备2024066792号-1</a>`,
+            message: "Copyright © 2024-present Zhang Fang Chao ",
+            copyright: `
+                <div>
+                    <a
+                        style="text-decoration-line: none; color: #338eff;"
+                        href="https://beian.mps.gov.cn/#/query/webSearch?code=33011002017672"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        <img
+                            style="width: 16px; display: inline-block; position: relative; top: 4px; right: 4px;"
+                            src="备案图标.png"
+                        />
+                    浙公网安备33011002017672
+                    </a>
+
+                    <a 
+                        style="text-decoration-line: none; color: #338eff;" 
+                        href="https://beian.miit.gov.cn"
+                        target="_blank"
+                    >
+                        &nbsp; 浙ICP备2024066792号-1
+                    </a>
+                </div>
+            `,
         },
     },
 });
+
