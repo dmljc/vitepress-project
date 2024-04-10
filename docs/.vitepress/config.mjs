@@ -167,7 +167,7 @@ export default defineConfig({
         footer: {
             message: "Copyright © 2024-present Zhang Fang Chao ",
             copyright: `
-                <div>
+                <ClientOnly>
                     <a
                         style="text-decoration-line: none; color: #338eff;"
                         href="https://beian.mps.gov.cn/#/query/webSearch?code=33011002017672"
@@ -188,7 +188,7 @@ export default defineConfig({
                     >
                         &nbsp; 浙ICP备2024066792号-1
                     </a>
-                </div>
+                </ClientOnly>
             `,
         },
     },
