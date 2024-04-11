@@ -165,11 +165,11 @@ export default defineConfig({
         outlineTitle: "页面导航",
         // 站点页脚配置
         footer: {
-            message: "Copyright © 2024-present Zhang Fang Chao ",
+            message: "Copyright © 2024-present 张芳朝",
             copyright: `
                 <ClientOnly>
                     <a
-                        style="text-decoration-line: none; color: #338eff;"
+                        style="text-decoration-line: none;"
                         href="https://beian.mps.gov.cn/#/query/webSearch?code=33011002017672"
                         rel="noreferrer"
                         target="_blank"
@@ -182,7 +182,7 @@ export default defineConfig({
                     </a>
 
                     <a 
-                        style="text-decoration-line: none; color: #338eff;" 
+                        style="text-decoration-line: none;" 
                         href="https://beian.miit.gov.cn"
                         target="_blank"
                     >
