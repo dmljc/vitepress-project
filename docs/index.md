@@ -11,11 +11,11 @@ hero:
     alt: zhangfangchao
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 3D案例体验
+      link: http://www.yanhuangxueyuan.com/3D/shoufeizhan/index.html
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 快速开始
+      link: /threejs/index.md
 
 features:
   - icon: 🤹
