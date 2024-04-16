@@ -251,6 +251,10 @@ export default defineConfig({
                             text: "阴影范围.shadow.camera",
                             link: "/threejs/phaseH/shadow.md",
                         },
+                        {
+                            text: "阴影.mapSize和.radius",
+                            link: "/threejs/phaseH/mapSize.md",
+                        },
                     ],
                 },
             ],
