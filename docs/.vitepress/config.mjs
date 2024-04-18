@@ -255,6 +255,10 @@ export default defineConfig({
                             text: "阴影.mapSize和.radius",
                             link: "/threejs/phaseH/mapSize.md",
                         },
+                        {
+                            text: "工厂光源(环境贴图和环境光)",
+                            link: "/threejs/phaseH/textureCube.md",
+                        },
                     ],
                 },
             ],
