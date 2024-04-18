@@ -113,7 +113,7 @@ directionalLight.shadow.camera.far = 100;
 
 ::: code-group
 
-```vue {26, 30-38} [index.vue]
+```vue {26,30-38} [index.vue]
 <template>
   <div ref="lightDom"></div>
 </template>
@@ -209,7 +209,7 @@ render();
 </script>
 ```
 
-```js {15, 28-34 } [model.js]
+```js {15,28-34} [model.js]
 import * as THREE from "three";
 
 // 立方体
