@@ -101,7 +101,7 @@ onMounted(() => {
 </script>
 ```
 
-```js:line-numbers{0} [less]
+```js:line-numbers{0} [index.less]
 <style scoped lang="less">
 #container {
     width: calc(100vw - 280px);
