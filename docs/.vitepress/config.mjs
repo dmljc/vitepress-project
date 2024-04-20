@@ -259,6 +259,10 @@ export default defineConfig({
                             text: "工厂光源(环境贴图和环境光)",
                             link: "/threejs/phaseH/textureCube.md",
                         },
+                        {
+                            text: "gui辅助调节光源阴影",
+                            link: "/threejs/phaseH/gui.md",
+                        },
                     ],
                 },
             ],
