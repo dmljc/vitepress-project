@@ -47,6 +47,8 @@ const camera = new THREE.OrthographicCamera(-s * k, s * k, s, -s, 1, 8000);
 
 ## 对比 Sprite 和矩形平面 Mesh
 
+![basic](/phaseI/basic.jpg)
+
 `Sprite` 形状是矩形，`PlaneGeometry` 创建的网格模型 `Mesh `的形状也是矩形。
 
 `Sprite` 与矩形平面 `Mesh` 的区别在于，当你旋转三维场景的时候，如果通过相机控件 `OrbitControls` 旋转测试，你可以发现 `Sprite` 矩形平面会始终平行于 `Canvas 画布`或者说屏幕，而矩形平面 `Mesh` 的姿态角度会跟着旋转，不一定平行于` canvas 画布`。
