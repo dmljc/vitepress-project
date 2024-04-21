@@ -241,6 +241,7 @@ export default defineConfig({
                 },
                 {
                     text: "光源和阴影",
+                    collapsed: true,
                     items: [
                         { text: "聚光源SpotLight", link: "/threejs/phaseH/spotLight.md" },
                         {
@@ -263,6 +264,14 @@ export default defineConfig({
                             text: "gui辅助调节光源阴影",
                             link: "/threejs/phaseH/gui.md",
                         },
+                    ],
+                },
+                {
+                    text: "精灵模型",
+                    items: [
+                        { text: "精灵模型Sprite", link: "/threejs/phaseI/basic.md" },
+                        { text: "精灵模型标注场景(贴图)", link: "/threejs/phaseI/texture.md" },
+                        { text: "Sprite模拟下雨、下雪", link: "/threejs/phaseI/application.md" },
                     ],
                 },
             ],
