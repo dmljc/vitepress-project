@@ -268,10 +268,17 @@ export default defineConfig({
                 },
                 {
                     text: "精灵模型",
+                    collapsed: true,
                     items: [
                         { text: "精灵模型Sprite", link: "/threejs/phaseI/basic.md" },
                         { text: "精灵模型标注场景(贴图)", link: "/threejs/phaseI/texture.md" },
                         { text: "Sprite模拟下雨、下雪", link: "/threejs/phaseI/application.md" },
+                    ],
+                },
+                {
+                    text: "后处理 EffectComposer ",
+                    items: [
+                        { text: "发光描边 OutlinePass", link: "/threejs/phaseJ/outlinePass.md" },
                     ],
                 },
             ],
