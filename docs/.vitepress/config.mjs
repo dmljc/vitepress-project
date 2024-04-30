@@ -281,6 +281,12 @@ export default defineConfig({
                         { text: "发光描边 OutlinePass", link: "/threejs/phaseJ/outlinePass.md" },
                     ],
                 },
+                {
+                    text: "射线拾取模式",
+                    items: [
+                        { text: "射线 Ray", link: "/threejs/phaseK/ray.md" },
+                    ],
+                },
             ],
         },
         socialLinks: [
