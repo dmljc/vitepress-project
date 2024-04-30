@@ -310,6 +310,10 @@ export default defineConfig({
               text: "Canvas尺寸变化(射线坐标计算)",
               link: "/threejs/phaseK/canvas.md",
             },
+            {
+              text: "射线拾取层级模型(模型描边)",
+              link: "/threejs/phaseK/outline.md",
+            },
           ],
         },
       ],
