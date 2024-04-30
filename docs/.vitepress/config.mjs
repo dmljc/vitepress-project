@@ -285,6 +285,7 @@ export default defineConfig({
                     text: "射线拾取模式",
                     items: [
                         { text: "射线 Ray", link: "/threejs/phaseK/ray.md" },
+                        { text: "射线拾取模型 Raycaster ", link: "/threejs/phaseK/raycaster.md" },
                     ],
                 },
             ],
