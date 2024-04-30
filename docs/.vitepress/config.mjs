@@ -302,6 +302,10 @@ export default defineConfig({
               text: "屏幕坐标转标准设备坐标",
               link: "/threejs/phaseK/coordinate.md",
             },
+            {
+              text: "鼠标点击选中模型 Raycaster ",
+              link: "/threejs/phaseK/mouseEvent.md",
+            },
           ],
         },
       ],

@@ -97,6 +97,8 @@ model.updateMatrixWorld(true);
 const intersects = raycaster.intersectObjects([mesh1, mesh2, mesh3]);
 ```
 
+## 示例代码如下：
+
 ::: code-group
 
 ```vue{8,79-93} [index.vue]

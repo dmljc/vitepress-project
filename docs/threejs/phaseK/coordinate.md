@@ -100,9 +100,11 @@ window.addEventListener("click", function (event) {
 
 实际开发的时候，你可以用 `.clientX`、`.clientY` 计算`标准设备坐标`，也可以用`.offsetX`、`.offsetY` 计算`标准设备坐标`。
 
+## 示例代码如下：
+
 ::: code-group
 
-```vue [index.vue]
+```vue{84-94} [index.vue]
 <template>
   <div ref="raycasterDom"></div>
 </template>
