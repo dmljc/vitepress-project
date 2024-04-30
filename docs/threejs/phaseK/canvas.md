@@ -1,0 +1,68 @@
+---
+outline: deep
+---
+
+# Canvas 尺寸变化 射线坐标计算
+
+本节课内容非常简单，就是你鼠标单击 canvas 画布，用`射线拾取模型`的时候，有一点要注意，Canvas 画布尺寸如果不是固定的，而是变化的，会对坐标变换有影响。
+
+## canvas 画布全屏-尺寸跟着浏览器窗口变化
+
+```js
+const width = window.innerWidth;
+const height = window.innerHeight;
+// 画布跟随窗口变化
+window.onresize = function () {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+};
+```
+
+如果 canvas 画布尺寸变化了，下面代码中的 width、height 还是原来的值，这时候射线拾取就有可能无法拾取到模型对象。
+
+```js
+renderer.domElement.addEventListener("click", function (event) {
+  const px = event.offsetX;
+  const py = event.offsetY;
+  //屏幕坐标转WebGL标准设备坐标
+  const x = (px / width) * 2 - 1;
+  const y = -(py / height) * 2 + 1;
+});
+```
+
+每次触发 click 事件，都要重新计算 canvas 画布。特殊情况，canvas 画布和 body 左上角重合，可以用 `clientX`、`clientY` 替换 `offsetX`、`offsetY`。
+
+```js
+renderer.domElement.addEventListener("click", function (event) {
+  const px = event.clientX;
+  const py = event.clientY;
+  //屏幕坐标转WebGL标准设备坐标
+  const x = (px / window.innerWidth) * 2 - 1;
+  const y = -(py / window.innerHeight) * 2 + 1;
+});
+```
+
+## canvas 局部布局-尺寸随窗口变化
+
+```js
+// 画布跟随窗口变化
+window.onresize = function () {
+  const width = window.innerWidth - 200; //canvas画布宽度
+  const height = window.innerHeight - 60; //canvas画布高度
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+  document.getElementById("left").style.height = height + "px";
+};
+```
+
+```js
+renderer.domElement.addEventListener("click", function (event) {
+  const width = window.innerWidth - 200;
+  const height = window.innerHeight - 60;
+  //屏幕坐标转WebGL标准设备坐标
+  const x = (px / width) * 2 - 1;
+  const y = -(py / height) * 2 + 1;
+});
+```

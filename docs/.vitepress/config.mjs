@@ -306,6 +306,10 @@ export default defineConfig({
               text: "鼠标点击选中模型 Raycaster ",
               link: "/threejs/phaseK/mouseEvent.md",
             },
+            {
+              text: "Canvas尺寸变化(射线坐标计算)",
+              link: "/threejs/phaseK/canvas.md",
+            },
           ],
         },
       ],
