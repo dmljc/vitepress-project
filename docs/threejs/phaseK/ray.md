@@ -85,7 +85,7 @@ console.log("查看是否相交", r);
 ```
 ## 示例效果如下
 
-![](/phaseK/raycaster.png)
+![ray](/phaseK/ray.png)
 
 ## 示例代码如下：
 
